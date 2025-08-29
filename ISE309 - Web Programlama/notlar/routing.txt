@@ -1,0 +1,7 @@
+1- her route modeli RouteCollection eklenti işlevi MapRoute
+2- istek işleyiciyle eşleşen bir URL modeli
+------
+1- route adı
+2- url modeli
+3- varsayılanlar
+4+ kısıtlamalar

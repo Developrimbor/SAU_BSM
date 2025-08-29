@@ -1,0 +1,7 @@
+1- öğrenmesi basit
+2- kodu sadeleştirir
+3- zaman tasarrufu
+4- @{....}
+5- @
+6- ;
+7- .cshtml

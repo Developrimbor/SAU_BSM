@@ -1,0 +1,7 @@
+1- Denetletici içeren  URL isteklerini yönetir.
+2- Eylem yöntemleri.
+3- Sistem.Web.MvcController sınıfından türetilir. -> controllerın verdiği sınıf
+4- Eylem yöntemleri herkese açık olmalıdır
+5- Aşırı yüklenemez
+6- Eylem yönetmi statik olamaz
+7- Adlandırma Controller ile bitmeli

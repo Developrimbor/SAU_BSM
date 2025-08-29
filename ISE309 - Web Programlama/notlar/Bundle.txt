@@ -1,0 +1,4 @@
+1- eklenen dosyalarda optimizasyon yapar (dosya boyutunun azaltılması ve değişken isimlerinin minimum uzunluğa çekilmesi)
+2- hızlı
+3- siliniyor
+4- düzenli ve optimize
