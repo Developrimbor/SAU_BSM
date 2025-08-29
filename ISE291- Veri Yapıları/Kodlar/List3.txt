@@ -1,0 +1,122 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<stdlib.h>
+struct Node{
+    int data;
+    struct Node * Link;
+};
+struct Node* root=NULL;
+void PrintList(){
+    if (root ==NULL){
+        printf ("Liste BoÅŸ");
+        return;
+    }
+    struct Node* n;
+    n=root;
+    while(n!=NULL){
+        printf("%d==>",n->data);
+        n=n->Link;
+    }
+}
+ void ListeyeEkle(){
+     struct Node *temp=NULL;
+     temp=(struct Node*)malloc(sizeof(struct Node));
+     printf("Liste elemanÄ±nÄ±n datasÄ±nÄ± giriniz ");
+     scanf("%d",&temp->data);
+     temp->Link=NULL;
+     if (root==NULL){
+         root=temp;
+     }else{
+         struct Node* p;
+         p=root;
+         while(p->Link!=NULL){
+             p=p->Link;
+         }
+         p->Link=temp;
+     }
+ }
+ int LengthList(){
+     int count=0;
+     if (root==NULL)
+        return count;
+    struct Node* temp;
+    temp=(struct Node*)malloc(sizeof(struct Node));
+    while (temp!=NULL){
+        temp=temp->Link;
+        count++;
+    }
+    return count;
+ }
+ void ArayaEkle(){
+     int count=1;
+     int n;
+     int len=LengthList();
+     printf("KaÃ§Ä±ncÄ± elemandan sonra deÄŸer ekleueceksiniz\n");
+     scanf("%d",&n);
+     if (n>len){
+         printf("Liste boyutu fazla");
+         return;
+     }
+     if (n==len){
+         printf("git sona ekle");
+         return;
+     }
+     if(n==1){
+         printf("rrot deÄŸiÅŸmeli");
+         return;
+     }
+     struct Node * p;
+     struct Node* temp=NULL;
+     temp=(struct Node*)malloc(sizeof(struct Node));
+     p=root;
+     while(count<n){
+         p=p->Link;
+         count++;
+     }
+     temp->data=100;
+     temp->Link=p->Link;
+     p->Link=temp;
+     
+     
+ }
+int main()
+{
+    int ch;
+    while (1){
+        printf("\n1-Eleman Ekle\n");
+        printf("2-Listeyi yazdÄ±r\n");
+        printf("3-Liste Boyutu \n");
+        printf("4-araya ekle \n");
+        printf("5-Ã‡Ä±kÄ±ÅŸ");
+        scanf("%d",&ch);
+        
+        switch (ch){
+            case 1: 
+              ListeyeEkle();
+              break;
+            case 2: 
+              PrintList();
+              break;
+             case 3: 
+              printf("\nListe Boyutu=%d \n",LengthList());
+              break;
+           case 4: //araya ekle dÃ¼zenlenecek
+			ArayaEkle();
+              break;
+             case 5:
+               return 0;
+        }
+               
+    }
+
+    
+
+    return 0;
+}
