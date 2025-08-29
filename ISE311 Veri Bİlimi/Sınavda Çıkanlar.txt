@@ -1,0 +1,21 @@
+
+VERİ BİLİMİ FİNALİ
+
+Çıkmış Sorulardan 4 soru geldi
+
+-Peynir tablosu oluşturma
+-Cevabı Switch olan SSIS ifadesi
+-Integration Services Catalogs
+-Fuzzy Grouping
+
+-Tablodaki satırları sütunlar haline getirme
+-SSIS Result Set Types
+-SQL de datetime a karşılık SSIS de nedir?
+-Input output result set değişken procedure
+-column da değişiklik yaptığımızda hangisini kullnmaya gerekmez
+(parametre, fonk, değişken, column, metod?)
+-3500-35000 aralığında hangi değer tipi kullanılır?
+-.csv dosyasını kaydetmek için SSIS deki hangi arac kullanılır.
+-Şıklarda business key gibi ifaderler bulunan soru vardı.
+- ? işaretli SQL kod sorusu vardı şıklarda ınput output vb seçnkler vardı.
+-Ödev dosyalarındaki SS lerden çıktı en az 5 soru

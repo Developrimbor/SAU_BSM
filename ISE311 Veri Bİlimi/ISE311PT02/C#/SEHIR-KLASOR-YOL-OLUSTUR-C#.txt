@@ -1,0 +1,24 @@
+      public string DUZELT(string ad)
+        {
+            var replacements = new Dictionary<string, string> {
+                { "İ", "I" }, { "Ö", "O" },
+                { "Ü", "U" }, { "Ğ", "G" },
+                { "Ş", "S" }, { "Ç", "C" }, { "Â", "A" }
+
+            };
+
+            var sonuc = replacements.Aggregate(ad, (current, replacement) => current.Replace(replacement.Key, replacement.Value));
+
+            return sonuc;
+        }
+
+        public void Main()
+		{
+         
+         string sehirAdOK = DUZELT(Dts.Variables["User::SehirAd"].Value.ToString().ToUpper());
+         string gecici = Path.GetDirectoryName(Dts.Variables["User::BolgeKlasor"].Value.ToString()) + "\\" + sehirAdOK + "\\";
+
+         Dts.Variables["User::SehirKlasor"].Value = gecici;
+
+         Dts.TaskResult = (int)ScriptResults.Success;
+		}

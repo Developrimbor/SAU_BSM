@@ -1,0 +1,18 @@
+SELECT BankaAd, DovizID, OrtalamaHesapYas, AktifHesapSayisi, ToplamBakiye FROM 
+(SELECT B.BolgeID, S.SehirAd, H.DovizID, BSI.BankaAd, 
+       AVG(DATEDIFF(YEAR, H.AcilmaTarihi, GETDATE())) AS OrtalamaHesapYas, 
+	   COUNT(H.HesapNo) AS AktifHesapSayisi, SUM(H.Meblag) AS ToplamBakiye
+FROM HESAP H
+INNER JOIN BANKA_SUBE BS
+ON H.SubeID = BS.SubeID
+INNER JOIN BANKA_SIRKET BSI
+ON BS.BankaID = BSI.BankaID
+INNER JOIN ILCE I
+ON I.IlceID = BS.IlceID
+INNER JOIN SEHIR S
+ON I.SehirID = S.SehirID
+INNER JOIN BOLGE B
+ON S.BolgeID = B.BolgeID
+WHERE H.DovizID NOT IN ('ALT','GPB') AND H.KapatmaTarihi IS NULL
+GROUP BY B.BolgeID, S.SehirAd, H.DovizID, BSI.BankaAd) OT
+WHERE BolgeID = ? AND SehirAd = ?

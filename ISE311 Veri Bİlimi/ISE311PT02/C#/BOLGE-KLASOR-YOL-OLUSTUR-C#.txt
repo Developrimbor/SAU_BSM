@@ -1,0 +1,32 @@
+public string DUZELT(string ad)
+        {
+            string basHarf = "";
+
+            ad.Split(' ').ToList().ForEach(i => basHarf += i[0].ToString());
+            basHarf += "B\\";
+
+            var replacements = new Dictionary<string, string> {
+                { "ı", "I" }, { "İ", "I" }, { "ö", "O" }, { "Ö", "O" },
+                { "ü", "U" }, { "Ü", "U" }, { "ğ", "G" }, { "Ğ", "G" },
+                { "ş", "S" }, { "Ş", "S" }, { "ç", "C" }, { "Ç", "C" },
+
+            };
+
+            var sonuc = replacements.Aggregate(basHarf, (current, replacement) => current.Replace(replacement.Key, replacement.Value));
+
+            return sonuc;
+        }
+
+		public void Main()
+		{
+            string gecici;
+
+            gecici = Dts.Variables["User::AnaKlasor"].Value.ToString()
+                + "0" + Dts.Variables["User::SayacI"].Value.ToString()
+                + "_"
+                + DUZELT(Dts.Variables["User::BolgeAd"].Value.ToString());
+
+            Dts.Variables["User::BolgeKlasor"].Value = gecici;
+
+			Dts.TaskResult = (int)ScriptResults.Success;
+		}

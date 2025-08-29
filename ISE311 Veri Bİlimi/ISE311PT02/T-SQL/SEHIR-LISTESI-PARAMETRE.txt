@@ -1,0 +1,1 @@
+SELECT SehirAd FROM SEHIR WHERE BolgeID = ?

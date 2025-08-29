@@ -1,0 +1,14 @@
+	public void Main()
+		{
+            string gecici;
+            string suan = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss");
+
+            gecici = Dts.Variables["User::SehirKlasor"].Value.ToString() +
+                "OzetTablo_" + suan + ".CSV";
+
+            //MessageBox.Show(gecici);
+            
+            Dts.Variables["User::DosyaAd"].Value = gecici;
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+		}

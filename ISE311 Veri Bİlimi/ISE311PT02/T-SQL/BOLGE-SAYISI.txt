@@ -1,0 +1,1 @@
+SELECT MAX(BolgeID) AS BolgeSayisi FROM BOLGE
