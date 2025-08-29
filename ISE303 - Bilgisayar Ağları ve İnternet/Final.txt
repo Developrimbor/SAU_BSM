@@ -1,0 +1,68 @@
+KONFİGÜRASYON SORULARI
+-OSPF
+-RIP
+-VLAN
+-VLSM
+
+
+VLAN'IN AVANTAJLARI
+
+-Güvenlik
+Ağlar mantıksal olarak bölündüğü için VLAN'lardaki cihazlar,
+diğer VLAN'lardaki ağlardan ayrılır. Farklı alanlarda yer alırlar.
+
+-Performans
+VLAN'lar arasında yrı trafik akışı oluştuğu için bir VLAN'ın ağ
+trafiği diğer VLAN'ın ağ trafiğini etkilemez.
+
+-Yayın Alanı
+Her VLAN'ın ayrı bir mantıksal ağa sahip olduğu için VLAN içerisinde
+ayrı bir yayın alanı oluşur.
+
+-Maliyet
+Anahtarlama cihazı içinde yer ayrı VLAN'lar oluşturularak yeni 
+anahtar(switch) gereksinimleri ortadan kaldırılır. Böylelikle maliyet
+düşer, tasarruf edilir.
+
+
+VLAN TÜRLERİ
+
+-Data VLAN
+Kullanıcılar için oluşturulmuş VLAN'lardır. Kullanıcı veri trafiği 
+taşımak için kullanılır.
+
+-Default VLAN
+Anahtar başlangıç yapılandırmasında var olan VLAN'dır.Varsayılan olarak
+anahtar üzerindeki tüm portlar bu VLAN'a dahildir. Yeniden adlandırılamaz ve silinemez.
+
+-Native VLAN
+802.1q protokolü ile farklı VLAN trafiğinin switchten çıkışı sağlanır.
+
+-Yönetim VLAN
+Uzaktan erişim ile cihazın yönetilmesini sağlayan VLAN'dır. 
+VLAN'lara IP adresi atanabilir.
+
+-Ses VLAN
+Ağlardaki ses veri tafiğini aktarmak için kullanılan VLAN'lara denir.
+
+-Reserved VLAN
+Anahtar cihazının başlangıcında yapılandırılmış, özel amaçlı protokellerin kullanılması için var olan bu VLAN'lar default VLAN 1 gibi silinemez ve değiştirilemez.
+
+
+PORT VLAN DURUMLARI
+
+-Access Modu
+Anahtar portunun sadece tek VLAN trafiğini taşıyacağı durumdur.
+Switch(config-if)#switchport mode access
+
+-Trunk Modu
+Anahtar portunun birden fazla VLAN tarfiğinin geçişine izin veridği durumdur.
+Switch(config-if)#switchport mode trunk
+
+-Desirable Modu
+Anahtar arayüzünün, karşısında yer alan bir diğer anahtar arayüzünün
+konumuna göre kendisini güncellediği durumdur.
+Switch(config-if)#switchport mode dynamic auto/desirable
+
+
+

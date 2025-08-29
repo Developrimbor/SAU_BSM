@@ -1,0 +1,20 @@
+(>)enable -> # moduna geçer
+
+(#)config terminal -> configure moduna girer
+(#)show running config -> mevcut configleri gösterir 
+(#)write -> değiştirilenleri kaydeder 
+
+(config)hostname $(adı)-> hostname adını değiştirir
+(config)interface $(değiştirilecek alan (gigabitEthernet 0/0)) -> alanı config etmeye girer
+(config)ip route $(karşı ağ adresi) $(subnet mask) $(karşı router wan ip)
+(config)router rip
+
+(config-if)ip adress $(ip adress) $(subnet mask) -> ip adresini configure eder
+(config-if)no shutdown -> portu aktif eder
+(config-if)(serial port)clock rate 64000 -> clock rateyi ayarlar
+
+(config-router)version2 -> rip algoritmasında 2. versiyonu aktif eder (VLSM destekler)
+(config-router)network(ağ adresi) -> RIP algoritması için routerin bağlı olduğu ağ adresleri tanımlanır
+
+exit -> bi üst moda geri çıkar
+end -> # moduna geri çıkar
