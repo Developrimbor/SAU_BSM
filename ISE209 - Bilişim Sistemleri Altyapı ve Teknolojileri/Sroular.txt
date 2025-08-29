@@ -1,0 +1,10 @@
+20 soru 
++Katmanlar ne işe yarar 
++Hangi katmanda hangi protokeller var
++Bahsedilen protokoller ne işe yarar
++4g-5g farkı
++Ip adresi verilip host adresini bulma - Kaç defa hostlanabilir
++Ağ adresi ve broadcast / genel yayın adresini bulun
++Host kısım, ağ kısım nereler ? 
++Ipv4 - Ipv6
+
