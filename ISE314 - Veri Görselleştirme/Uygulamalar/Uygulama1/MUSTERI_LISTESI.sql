@@ -1,0 +1,9 @@
+SELECT M.MusteriID, COUNT(H.HesapNo) AS HesapSayisi
+,COUNT(DISTINCT DovizID) AS FDCHesapSayisi
+FROM HESAP H
+INNER JOIN MUSTERI M
+ON H.MusteriID = M.MusteriID
+WHERE M.KategoriID IN ('B','C','E') AND H.KapatmaTarihi IS NULL
+GROUP BY M.MusteriID
+HAVING COUNT(H.HesapNo)>14 AND COUNT(DISTINCT DovizID)>=5
+ORDER BY M.MusteriID
