@@ -1,0 +1,3012 @@
+<!DOCTYPE html>
+<!-- saved from url=(0265)file:///C:/Users/%D8%AA%D9%82%D9%8A%20%D8%A7%D9%84%D8%AF%D9%8A%D9%86/Desktop/%D8%A7%D9%84%D8%A7%D9%85%D8%AA%D8%AD%D8%A7%D9%86%20%D8%A7%D9%84%D8%A3%D8%AE%D9%8A%D8%B1%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9%20(1).html -->
+<html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="">--><!--<base href=".">--><base href=".">
+    
+        <title>SABİS | Sakarya Üniversitesi Bilgi Sistemi</title>
+
+    <meta name="description" content="Çevrimiçi Sınav Sistemi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--begin::Fonts -->
+    <link rel="stylesheet" href="./E_Ticaret_final_files/css">
+
+    <!--end::Fonts -->
+    <!--begin::Page Vendors Styles(used by this page) -->
+    
+
+    <style type="text/css">
+        .cevap {
+            vertical-align: top;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 10px;
+        }
+
+        .cevap-yazi {
+            padding: 2px;
+        }
+
+        .radio.radio-success > input:checked ~ span:after {
+            background-color: #1BC5BD !important;
+            border-color: #1BC5BD !important;
+        }
+
+        .radio span {
+            flex-shrink: 0;
+        }
+
+
+        .question-number {
+            border: solid 2px;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .radio-disabled {
+            opacity: 1 !important;
+        }
+
+        .answer-text {
+            white-space: pre-wrap;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .empty-question {
+            border: solid 1px #f64e60 !important;
+        }
+
+        .jdflkgjlk {
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .xChmeYsm {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='110px' width='160px'><text transform='translate(10, 90) rotate(-30)' fill='rgb(224,224,224)' fill-opacity='0.6' font-size='12' style='border:solid 1px black; font-family:Poppins, Helvetica'></text></svg>") !important;
+        }
+    </style>
+
+    <link href="./E_Ticaret_finalfiles/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
+
+    <!--end::Page Vendors Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="./E_Ticaret_finalfiles/plugins.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./E_Ticaret_finalfiles/prismjs.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./E_Ticaret_finalfiles/style.bundle.css" rel="stylesheet" type="text/css">
+
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="./E_Ticaret_finalfiles/dark.css" rel="stylesheet" type="text/css">
+    <link href="./E_Ticaret_finalfiles/light.css" rel="stylesheet" type="text/css">
+    <link href="./E_Ticaret_finalfiles/dark(1).css" rel="stylesheet" type="text/css">
+    <link href="./E_Ticaret_finalfiles/light(1).css" rel="stylesheet" type="text/css">
+
+    <!--end::Layout Skins -->
+        <link rel="shortcut icon" href="https://cdn0.sabis.sakarya.edu.tr/saulogo/favicon.ico">
+
+    <style type="text/css">
+        #img-preview {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            min-height: 100vh;
+            width: 100%;
+            z-index: 1999;
+            background: #0000006b;
+            padding: 100px 10% 0 10%;
+            text-align: center;
+            display: none;
+            bottom: 0;
+        }
+
+        #img-preview-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 32px;
+            color: white;
+            background-color: transparent;
+        }
+
+        #img-preview-info {
+            position: absolute;
+            bottom: 30px;
+            color: #ffffff6e;
+            left: 45%;
+        }
+
+        .toast-error {
+            background-color: #bd362f !important;
+        }
+    </style>
+
+<style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}
+
+
+/* scrollbar is not visible by default for legend, hence forcing the visibility */
+.apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+
+.apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.apexcharts-text tspan {
+  font-family: inherit;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark {
+  color: #fff;
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.apexcharts-tooltip * {
+  font-family: inherit;
+}
+
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #333;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active,
+.apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+
+.apexcharts-tooltip-series-group-hidden {
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  padding: 0 !important;
+}
+
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+
+.apexcharts-tooltip-candlestick>div {
+  margin: 4px 0;
+}
+
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-tooltip-rangebar {
+  padding: 5px 8px;
+}
+
+.apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777;
+}
+
+.apexcharts-tooltip-rangebar .series-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-xaxistooltip:after,
+.apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+.apexcharts-xaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-top:after,
+.apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top:after {
+  border-top-color: #ECEFF1
+}
+
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:after {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-yaxistooltip:after,
+.apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-yaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.apexcharts-yaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after,
+.apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+
+.apexcharts-yaxistooltip-right:after,
+.apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:after {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:after {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip.apexcharts-active {
+  opacity: 1;
+}
+
+.apexcharts-yaxistooltip-hidden {
+  display: none;
+}
+
+.apexcharts-xcrosshairs,
+.apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.apexcharts-active,
+.apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_boundingRect, .svg_select_points_rot {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.apexcharts-selection-rect + g .svg_select_boundingRect,
+.apexcharts-selection-rect + g .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.apexcharts-selection-rect + g .svg_select_points_l,
+.apexcharts-selection-rect + g .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg_select_points {
+  fill: #efefef;
+  stroke: #333;
+  rx: 2;
+}
+
+.apexcharts-canvas.apexcharts-zoomable .hovering-zoom {
+  cursor: crosshair
+}
+
+.apexcharts-canvas.apexcharts-zoomable .hovering-pan {
+  cursor: move
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon,
+.apexcharts-reset-icon,
+.apexcharts-pan-icon,
+.apexcharts-selection-icon,
+.apexcharts-menu-icon,
+.apexcharts-toolbar-custom-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6E8192;
+  text-align: center;
+}
+
+.apexcharts-zoom-icon svg,
+.apexcharts-zoomin-icon svg,
+.apexcharts-zoomout-icon svg,
+.apexcharts-reset-icon svg,
+.apexcharts-menu-icon svg {
+  fill: #6E8192;
+}
+
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.76)
+}
+
+.apexcharts-theme-dark .apexcharts-zoom-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomout-icon svg,
+.apexcharts-theme-dark .apexcharts-reset-icon svg,
+.apexcharts-theme-dark .apexcharts-pan-icon svg,
+.apexcharts-theme-dark .apexcharts-selection-icon svg,
+.apexcharts-theme-dark .apexcharts-menu-icon svg,
+.apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg {
+  fill: #f3f4f5;
+}
+
+.apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg {
+  fill: #008FFB;
+}
+
+.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+.apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon,
+.apexcharts-menu-icon {
+  position: relative;
+}
+
+.apexcharts-reset-icon {
+  margin-left: 5px;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-reset-icon,
+.apexcharts-menu-icon {
+  transform: scale(0.85);
+}
+
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon {
+  transform: scale(0.7)
+}
+
+.apexcharts-zoomout-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.62);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+
+.apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: #008FFB;
+}
+
+.apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: 0.15s ease all;
+  pointer-events: none;
+}
+
+.apexcharts-menu.apexcharts-menu-open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.apexcharts-theme-light .apexcharts-menu-item:hover {
+  background: #eee;
+}
+
+.apexcharts-theme-dark .apexcharts-menu {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  }
+}
+
+.apexcharts-datalabel.apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabels,
+.apexcharts-datalabel,
+.apexcharts-datalabel-label,
+.apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-canvas .apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-gridline,
+.apexcharts-annotation-rect,
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line,
+.apexcharts-zoom-rect,
+.apexcharts-toolbar svg,
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-radar-series path,
+.apexcharts-radar-series polygon {
+  pointer-events: none;
+}
+
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Resize generated styles */
+
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resize-triggers,
+.resize-triggers>div,
+.contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize-triggers>div {
+  background: #eee;
+  overflow: auto;
+}
+
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}</style><style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}
+
+
+/* scrollbar is not visible by default for legend, hence forcing the visibility */
+.apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+
+.apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.apexcharts-text tspan {
+  font-family: inherit;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark {
+  color: #fff;
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.apexcharts-tooltip * {
+  font-family: inherit;
+}
+
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #333;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active,
+.apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+
+.apexcharts-tooltip-series-group-hidden {
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  padding: 0 !important;
+}
+
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+
+.apexcharts-tooltip-candlestick>div {
+  margin: 4px 0;
+}
+
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-tooltip-rangebar {
+  padding: 5px 8px;
+}
+
+.apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777;
+}
+
+.apexcharts-tooltip-rangebar .series-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-xaxistooltip:after,
+.apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+.apexcharts-xaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-top:after,
+.apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top:after {
+  border-top-color: #ECEFF1
+}
+
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:after {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-yaxistooltip:after,
+.apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-yaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.apexcharts-yaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after,
+.apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+
+.apexcharts-yaxistooltip-right:after,
+.apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:after {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:after {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip.apexcharts-active {
+  opacity: 1;
+}
+
+.apexcharts-yaxistooltip-hidden {
+  display: none;
+}
+
+.apexcharts-xcrosshairs,
+.apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.apexcharts-active,
+.apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_boundingRect, .svg_select_points_rot {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.apexcharts-selection-rect + g .svg_select_boundingRect,
+.apexcharts-selection-rect + g .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.apexcharts-selection-rect + g .svg_select_points_l,
+.apexcharts-selection-rect + g .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg_select_points {
+  fill: #efefef;
+  stroke: #333;
+  rx: 2;
+}
+
+.apexcharts-canvas.apexcharts-zoomable .hovering-zoom {
+  cursor: crosshair
+}
+
+.apexcharts-canvas.apexcharts-zoomable .hovering-pan {
+  cursor: move
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon,
+.apexcharts-reset-icon,
+.apexcharts-pan-icon,
+.apexcharts-selection-icon,
+.apexcharts-menu-icon,
+.apexcharts-toolbar-custom-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6E8192;
+  text-align: center;
+}
+
+.apexcharts-zoom-icon svg,
+.apexcharts-zoomin-icon svg,
+.apexcharts-zoomout-icon svg,
+.apexcharts-reset-icon svg,
+.apexcharts-menu-icon svg {
+  fill: #6E8192;
+}
+
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.76)
+}
+
+.apexcharts-theme-dark .apexcharts-zoom-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomout-icon svg,
+.apexcharts-theme-dark .apexcharts-reset-icon svg,
+.apexcharts-theme-dark .apexcharts-pan-icon svg,
+.apexcharts-theme-dark .apexcharts-selection-icon svg,
+.apexcharts-theme-dark .apexcharts-menu-icon svg,
+.apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg {
+  fill: #f3f4f5;
+}
+
+.apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg {
+  fill: #008FFB;
+}
+
+.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+.apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon,
+.apexcharts-menu-icon {
+  position: relative;
+}
+
+.apexcharts-reset-icon {
+  margin-left: 5px;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-reset-icon,
+.apexcharts-menu-icon {
+  transform: scale(0.85);
+}
+
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon {
+  transform: scale(0.7)
+}
+
+.apexcharts-zoomout-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.62);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+
+.apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: #008FFB;
+}
+
+.apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: 0.15s ease all;
+  pointer-events: none;
+}
+
+.apexcharts-menu.apexcharts-menu-open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.apexcharts-theme-light .apexcharts-menu-item:hover {
+  background: #eee;
+}
+
+.apexcharts-theme-dark .apexcharts-menu {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  }
+}
+
+.apexcharts-datalabel.apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabels,
+.apexcharts-datalabel,
+.apexcharts-datalabel-label,
+.apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-canvas .apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-gridline,
+.apexcharts-annotation-rect,
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line,
+.apexcharts-zoom-rect,
+.apexcharts-toolbar svg,
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-radar-series path,
+.apexcharts-radar-series polygon {
+  pointer-events: none;
+}
+
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Resize generated styles */
+
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resize-triggers,
+.resize-triggers>div,
+.contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize-triggers>div {
+  background: #eee;
+  overflow: auto;
+}
+
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}</style></head>
+
+<body id="kt_body" class="header-fixed header-mobile-fixed vsc-initialized" data-scrolltop="on">
+    <!--begin::Main-->
+    <!--begin::Header Mobile-->
+    
+  
+
+    
+
+        <!--end::Header Menu Wrapper-->
+        <!--begin::Topbar-->
+       
+
+                        
+
+
+
+<div class="container-fluid" onselectstart="return false" onpaste="return false;" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false">
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="fc2c3edb-1bdc-41d3-ba83-77efbd3451cb">Soru 1</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Frenken ve Schor (2017)'e göre, aşağıdaki faaliyetler hangisi paylaşım ekonomisinin temeli olarak ifade edilmektedir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-fc2c3edb-1bdc-41d3-ba83-77efbd3451cb" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Ticari faaliyetlerde yeni ürün satışı</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-fc2c3edb-1bdc-41d3-ba83-77efbd3451cb" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hizmet sektöründe geçici erişimi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-fc2c3edb-1bdc-41d3-ba83-77efbd3451cb" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hiçbiri
+</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-fc2c3edb-1bdc-41d3-ba83-77efbd3451cb" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk"> Âtıl kapasitenin değerlendirilmesi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-fc2c3edb-1bdc-41d3-ba83-77efbd3451cb" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Tüketiciden tüketiciye ürün satışı</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="3218671e-ecc5-45a8-a7ed-fcd63a7ca1b3">Soru 2</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p><strong>B2G</strong> ; İşletmelerin ya da ticaret ve sanayi odaları gibi topluluklarının geri bildirim sağlayarak, devlet kademelerinde ilgili alanlarda katılımı gerçekleştirerek gelişimin sağlanmasını hedefleyen bir yaklaşım olarak değerlendirilebilir</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3218671e-ecc5-45a8-a7ed-fcd63a7ca1b3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yanlış</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3218671e-ecc5-45a8-a7ed-fcd63a7ca1b3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Doğru</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="795d5dc9-d402-4ed9-97ae-491ce2cd63b1">Soru 3</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Paylaşım ekonomisi, aşağıdaki konulardan hangisine odaklanarak etkin kullanımı dikkate almakta ve kaynak optimizasyonunu gerçekleştirmeyi hedeflemektedir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-795d5dc9-d402-4ed9-97ae-491ce2cd63b1" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">İnovasyon</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-795d5dc9-d402-4ed9-97ae-491ce2cd63b1" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yatırım</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-795d5dc9-d402-4ed9-97ae-491ce2cd63b1" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hiçbiri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-795d5dc9-d402-4ed9-97ae-491ce2cd63b1" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Ticaret</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-795d5dc9-d402-4ed9-97ae-491ce2cd63b1" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Mülkiyet</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="cc4772f8-cb1e-4511-aa9d-4731294fe72b">Soru 4</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Akademik olarak e-memnuniyet kavramının ifade edildiği ilk çalışma hangisidir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc4772f8-cb1e-4511-aa9d-4731294fe72b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Szymanski ve Hise</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc4772f8-cb1e-4511-aa9d-4731294fe72b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Anderson ve Srinivasan </strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc4772f8-cb1e-4511-aa9d-4731294fe72b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk"> Bansal vd. </strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc4772f8-cb1e-4511-aa9d-4731294fe72b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Anand</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc4772f8-cb1e-4511-aa9d-4731294fe72b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Evanschitzky vd.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="6f359c56-f5be-4a9b-acb4-f0a02251fa8c">Soru 5</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Topluluk temelli ekonomi aşağıdaki amaçlardan hangisine hizmet etmektedir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-6f359c56-f5be-4a9b-acb4-f0a02251fa8c" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Kâr amacı gütmek</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-6f359c56-f5be-4a9b-acb4-f0a02251fa8c" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Mülkiyet devri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-6f359c56-f5be-4a9b-acb4-f0a02251fa8c" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hiçbiri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-6f359c56-f5be-4a9b-acb4-f0a02251fa8c" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Ekonomik değer yaratma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-6f359c56-f5be-4a9b-acb4-f0a02251fa8c" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sosyal amaçlar</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="317d611e-3cb4-49cb-91c2-8c5d87ac2256">Soru 6</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi SERVQUAL Modeli boyutlarından biri değildir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-317d611e-3cb4-49cb-91c2-8c5d87ac2256" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Güvenilirlik
+</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-317d611e-3cb4-49cb-91c2-8c5d87ac2256" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Cevap Verme Yeteneği
+</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-317d611e-3cb4-49cb-91c2-8c5d87ac2256" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Etkileşim</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-317d611e-3cb4-49cb-91c2-8c5d87ac2256" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Garanti</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-317d611e-3cb4-49cb-91c2-8c5d87ac2256" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Fiziksel varlıklar
+</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="770d8c31-52b8-482a-b7c3-bf8777d073e9">Soru 7</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi <u>kalite</u> ve <u>memnuniyet</u> kavramları arasındaki farklılıklardan biri değildir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-770d8c31-52b8-482a-b7c3-bf8777d073e9" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Deneyimlerin Kullanımı</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-770d8c31-52b8-482a-b7c3-bf8777d073e9" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">İşlevsellik ve Teknik Boyut</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-770d8c31-52b8-482a-b7c3-bf8777d073e9" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Beklentiler ve Standartlar</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-770d8c31-52b8-482a-b7c3-bf8777d073e9" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Özellik Boyutu</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-770d8c31-52b8-482a-b7c3-bf8777d073e9" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bilişsel veya Duygusal Etkiler</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="b8f602dc-24fe-41d7-99fe-94ccbdc537dd">Soru 8</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>İnternet üzerinde bilişsel bir davranıştan çok duygusal bir güdüyle web sayfalarında amaçsızca dolaşan ve tekliflere şan eseri ulaşan internet kullanıcısı hangisidir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b8f602dc-24fe-41d7-99fe-94ccbdc537dd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Online Surfer</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b8f602dc-24fe-41d7-99fe-94ccbdc537dd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Online Prosumer</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b8f602dc-24fe-41d7-99fe-94ccbdc537dd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sadık Müşteri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b8f602dc-24fe-41d7-99fe-94ccbdc537dd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Online Müşteri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b8f602dc-24fe-41d7-99fe-94ccbdc537dd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Online Tüketici
+</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="0e3c19f7-a813-4db8-83ff-bf5673bf0a43">Soru 9</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Geniş seçim olanağı ve alıcıların fiyat hassasiyeti, elektonik ticarette tedarikçilerin pazarlık gücünü <strong><em><u>düşürmektedir.</u></em></strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-0e3c19f7-a813-4db8-83ff-bf5673bf0a43" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yanlış</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-0e3c19f7-a813-4db8-83ff-bf5673bf0a43" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Doğru</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="df754572-c0a3-4e22-8449-87e47b58daad">Soru 10</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Paylaşım ekonomisi aşağıdaki kavramlardan hangisiyle açıklanmaktadır?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-df754572-c0a3-4e22-8449-87e47b58daad" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Erişim ekonomisi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-df754572-c0a3-4e22-8449-87e47b58daad" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Topluluk temelli ekonomi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-df754572-c0a3-4e22-8449-87e47b58daad" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Platform ekonomisi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-df754572-c0a3-4e22-8449-87e47b58daad" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Tümü</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-df754572-c0a3-4e22-8449-87e47b58daad" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hiçbiri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="fe9d7664-e37b-4666-806c-70e890ec0a08">Soru 11</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p><strong><em><u>e-Ticaret;</u>  </em></strong>üretim, araştırma, geliştirme, pazarlama, gelen ve giden lojistik faaliyetleri kapsayan her türlü iş akışının elektronik ortamda yerine getirilmesini içeren kavram olarak tanımlanmaktadır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-fe9d7664-e37b-4666-806c-70e890ec0a08" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yanlış</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-fe9d7664-e37b-4666-806c-70e890ec0a08" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Doğru</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="3b8662fe-2d4b-4848-9a59-02d47edcff27">Soru 12</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>e-Hizmet Kalitesi modelleri içinde estetik ve eğlence faktörlerini dikkate alan ilk yaklaşım aşağıdakilerden hangisidir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3b8662fe-2d4b-4848-9a59-02d47edcff27" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">e-Servqual Modeli</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3b8662fe-2d4b-4848-9a59-02d47edcff27" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">eTransQual Modeli </strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3b8662fe-2d4b-4848-9a59-02d47edcff27" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">E-RECS-QUAL Modeli</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3b8662fe-2d4b-4848-9a59-02d47edcff27" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">eTailQ Modeli</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3b8662fe-2d4b-4848-9a59-02d47edcff27" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Grönroos Modeli</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="cc779f24-ca7f-40fd-9a20-6b41c7d0e0bd">Soru 13</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi Meier ve Stormer 'in sınıflandırdığı tüketici türlerinden biri değildir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc779f24-ca7f-40fd-9a20-6b41c7d0e0bd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Online Surfer</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc779f24-ca7f-40fd-9a20-6b41c7d0e0bd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Online Prosumer</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc779f24-ca7f-40fd-9a20-6b41c7d0e0bd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sosyal Tüketici</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc779f24-ca7f-40fd-9a20-6b41c7d0e0bd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Online Tüketici</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cc779f24-ca7f-40fd-9a20-6b41c7d0e0bd" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sadık Müşteri </strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="ec74b615-c726-41f5-9a58-3a3b3a0eb389">Soru 14</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>E-hizmet kalitesi ölçümünde Bauer ve arkadaşlarının önerdiği (eTransQual) temel dört boyut hangileridir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-ec74b615-c726-41f5-9a58-3a3b3a0eb389" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hız, Fiyat, İletişim, Reklam</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-ec74b615-c726-41f5-9a58-3a3b3a0eb389" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bilgi Süreci, Anlaşma Süreci, Yerine Getirme Süreci, Satış Sonrası Süreç</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-ec74b615-c726-41f5-9a58-3a3b3a0eb389" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Estetik, Deneyim, İnovasyon, Çeşitlilik</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-ec74b615-c726-41f5-9a58-3a3b3a0eb389" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yetenek, Uygunluk, Güvenlik, Bakım Kolaylığı</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-ec74b615-c726-41f5-9a58-3a3b3a0eb389" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Talep, Pazarlama, Üretim, Dağıtım</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="8de4c347-e925-46d2-9f16-11e4fb18a6fe">Soru 15</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Grönroos'ün genel olarak iyi algılanan geleneksel bir hizmet için üç önemli bileşenden biri olarak ifade ettiği etkileşim kavramı hangi şıkta doğru olarak örneklendirilmiştir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-8de4c347-e925-46d2-9f16-11e4fb18a6fe" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Destekleyici hizmetlerin kalitesi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-8de4c347-e925-46d2-9f16-11e4fb18a6fe" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">firmanın yeri, açık olduğu saatler</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-8de4c347-e925-46d2-9f16-11e4fb18a6fe" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Rakiplerin hizmetleri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-8de4c347-e925-46d2-9f16-11e4fb18a6fe" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">hiçbiri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-8de4c347-e925-46d2-9f16-11e4fb18a6fe" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">iyi niyetli personel ve rezervasyon sistemleri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="7355312b-f51e-4538-aa38-8ef0200eaa5a">Soru 16</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <ol><li>Sanal Topluluklar ve Kullanıcı Grupları</li><li>Simülasyon ve Test Fırsatları</li></ol><p><br></p><p>Pazar uzayı kapsamında ifade edilen yukarıdaki maddeler satın alma karar sürecinin hangi aşamasıdır ? </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7355312b-f51e-4538-aa38-8ef0200eaa5a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Satın Alma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7355312b-f51e-4538-aa38-8ef0200eaa5a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Alternatiflerin Değerlendirilmesi
+</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7355312b-f51e-4538-aa38-8ef0200eaa5a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Problemin Tanımlanması
+</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7355312b-f51e-4538-aa38-8ef0200eaa5a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Satın Alma Sonrası Davranışlar</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7355312b-f51e-4538-aa38-8ef0200eaa5a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bilgi Arama</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="4fe8e8bb-9741-4bef-8f20-0beeefd59788">Soru 17</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Ürün satışının gerçekleşmediği fakat offline (geleneksel pazar) ortamda satın alma eyleminin tetiklenmesi için bilgi sağlama ya da müşteriyle ilişki geliştirmenin amaçlanması elektronik ortamda var olma nedenlerinden hangisidir ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4fe8e8bb-9741-4bef-8f20-0beeefd59788" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Portal yada Medya Siteleri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4fe8e8bb-9741-4bef-8f20-0beeefd59788" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Markalaşmak</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4fe8e8bb-9741-4bef-8f20-0beeefd59788" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">e-Ticaret</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4fe8e8bb-9741-4bef-8f20-0beeefd59788" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hizmet Temelli - İlişki Geliştirme</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4fe8e8bb-9741-4bef-8f20-0beeefd59788" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hiçbiri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="006a6215-13f7-449b-9797-2d6fb4a12264">Soru 18</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>5S yaklaşımının "Serve" (Hizmet, Katma Değer) kavramı aşağıdakilerden hangisini ifade eder?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-006a6215-13f7-449b-9797-2d6fb4a12264" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">İşletmelerin faaliyetlerinde internet teknolojilerinin kullanılarak marka farkındalığı ve bilinirliğini arttırma faydası</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-006a6215-13f7-449b-9797-2d6fb4a12264" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Geleneksel pazarda faaliyette bulunan bir işletme için satış arttırıcı bir araç olarak internet teknolojilerinden yararlanma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-006a6215-13f7-449b-9797-2d6fb4a12264" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">İşletmelerin internet teknolojilerini kullanarak ürünün üretim aşamasından nihai müşteriye sunulmasına kadar geçen aşamalarda yeniden yapılanmasıyla sağlanan tasarruf faydası</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-006a6215-13f7-449b-9797-2d6fb4a12264" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yeni dönemde Sosyal CRM (Customer Relationship Management) olarak ifade edebileceğimiz, internet teknolojilerinin pazarlama faaliyetlerine sağlamış olduğu bir fayda</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-006a6215-13f7-449b-9797-2d6fb4a12264" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">internet teknolojilerinin ürün bilgilerinin sunulduğu yada farklı bir uygulama ile işletmeye ekstra fayda sağlayacak bir biçimde kullanılması</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="b9a866ac-7ee3-466e-8a02-98eaa873ffd5">Soru 19</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <ol><li>Müşteriyi daha iyi tanımak için veritabanları</li><li>İhtiyaç ve isteklerin tahmin edilmesi</li><li>Problemlere Tepki</li></ol><p><br></p><p>Pazar uzayı kapsamında ifade edilen yukarıdaki maddeler satın alma karar sürecinin hangi aşamasıdır ? </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b9a866ac-7ee3-466e-8a02-98eaa873ffd5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Problemin Tanımlanması</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b9a866ac-7ee3-466e-8a02-98eaa873ffd5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Alternatiflerin Değerlendirilmesi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b9a866ac-7ee3-466e-8a02-98eaa873ffd5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Satın Alma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b9a866ac-7ee3-466e-8a02-98eaa873ffd5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Satın Alma Sonrası Davranışlar</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b9a866ac-7ee3-466e-8a02-98eaa873ffd5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bilgi Arama</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="bb178565-1e23-4501-9ea2-a221841279c6">Soru 20</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi Porter'ın beş rekabet gücü kapsamında değerlendirilmez ? </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom xChmeYsm mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-bb178565-1e23-4501-9ea2-a221841279c6" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">İkame Ürün ve Hizmetlerin Tehdidi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-bb178565-1e23-4501-9ea2-a221841279c6" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Rakipler Arasında Rekabet Yoğunluğu</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-bb178565-1e23-4501-9ea2-a221841279c6" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Tedarikçilerin Pazarlık Gücü</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-bb178565-1e23-4501-9ea2-a221841279c6" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Giriş Bariyeri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-bb178565-1e23-4501-9ea2-a221841279c6" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Değer Zinciri</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+
+ 
+
+
+    <!--end::Scrolltop-->
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-29424182-21&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="./E_Ticaret_finalfiles/analytics.js.تنزيل"></script><script type="text/javascript" async="" src="./E_Ticaret_finalfiles/js"></script><script>
+        var KTAppSettings = {
+            "breakpoints": {
+                "sm": 576,
+                "md": 768,
+                "lg": 992,
+                "xl": 1200,
+                "xxl": 1200
+            },
+            "colors": {
+                "theme": {
+                    "base": {
+                        "white": "#ffffff",
+                        "primary": "#6993FF",
+                        "secondary": "#E5EAEE",
+                        "success": "#1BC5BD",
+                        "info": "#8950FC",
+                        "warning": "#FFA800",
+                        "danger": "#F64E60",
+                        "light": "#F3F6F9",
+                        "dark": "#212121"
+                    },
+                    "light": {
+                        "white": "#ffffff",
+                        "primary": "#E1E9FF",
+                        "secondary": "#ECF0F3",
+                        "success": "#C9F7F5",
+                        "info": "#EEE5FF",
+                        "warning": "#FFF4DE",
+                        "danger": "#FFE2E5",
+                        "light": "#F3F6F9",
+                        "dark": "#D6D6E0"
+                    },
+                    "inverse": {
+                        "white": "#ffffff",
+                        "primary": "#ffffff",
+                        "secondary": "#212121",
+                        "success": "#ffffff",
+                        "info": "#ffffff",
+                        "warning": "#ffffff",
+                        "danger": "#ffffff",
+                        "light": "#464E5F",
+                        "dark": "#ffffff"
+                    }
+                },
+                "gray": {
+                    "gray-100": "#F3F6F9",
+                    "gray-200": "#ECF0F3",
+                    "gray-300": "#E5EAEE",
+                    "gray-400": "#D6D6E0",
+                    "gray-500": "#B5B5C3",
+                    "gray-600": "#80808F",
+                    "gray-700": "#464E5F",
+                    "gray-800": "#1B283F",
+                    "gray-900": "#212121"
+                }
+            },
+            "font-family": "Poppins"
+        };
+
+        function PageLoadingStart() {
+            KTApp.blockPage({ overlayColor: "#000000", type: "v2", state: "success", message: "Lütfen bekleyin..." });
+        }
+
+        function PageLoadingStop() {
+            KTApp.unblockPage();
+        }
+
+        function PreviewImage(target) {
+            $("#img-preview img").attr('src', $(target).children().first().attr('src'));
+            $("#img-preview").show();
+        }
+
+
+    </script>
+
+    <!-- end::Global Config -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="./E_Ticaret_finalfiles/plugins.bundle.js.تنزيل" type="text/javascript"></script>
+    <script src="./E_Ticaret_finalfiles/prismjs.bundle.js.تنزيل"></script>
+    <script src="./E_Ticaret_finalfiles/scripts.bundle.js.تنزيل" type="text/javascript"></script>
+
+    <!--end::Global Theme Bundle -->
+    <!--begin::Page Vendors(used by this page) -->
+    <script src="./E_Ticaret_finalfiles/fullcalendar.bundle.js.تنزيل" type="text/javascript"></script>
+
+    <!--end::Page Vendors -->
+    <!--begin::Page Scripts(used by this page) -->
+
+    <!--end::Page Scripts -->
+
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("body").on("contextmenu", function (e) {
+                return false;
+            });
+
+            $('body').bind('cut copy paste', function (e) {
+                e.preventDefault();
+            });
+
+            window.onbeforeprint = function () {
+                $('div').hide();
+            };
+
+            $('#form-end').on('submit', function () {
+                var $this = $(this);
+
+                Swal.fire({
+                    title: 'Dikkat',
+                    text: "Sınavı bitirmek üzeresiniz. Sınavı bitirdiğiniz takdirde süreniz olsa dahi tekrar bu sınava giriş yapamazsınız.",
+                    icon: 'error',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sınavı Bitir',
+                    cancelButtonText: 'İptal'
+                }).then((result) => {
+                    if (result.value) {
+                        $this.off('submit').submit();
+                    }
+
+                });
+
+                return false;
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#img-preview").click(function () {
+                $(this).hide();
+            });
+        });
+
+        $(document).ajaxError(function (e, x) {
+            toastr.error("Beklenmedik bir hata oluştu.<br/>İnternet bağlantınızın olduğundan emin olun.<br/>Sayfayı yenilemeyi deneyin veya daha sonra tekrar deneyin.", "Hata", { timeOut: 10000 });
+        });
+
+        $(document).ajaxSuccess(function (e, x) {
+            if (x.responseJSON !== undefined && x.responseJSON.autoHandle) {
+                handleToast(x.responseJSON);
+            }
+        });
+
+        function handleToast(toast) {
+            var txt = '';
+            if (toast.messageList != null) {
+                txt = toast.messageList.join('<br/>');
+            }
+
+            switch (toast.enumResultType) {
+                case 1:
+                    toastr.success(txt, "Başarılı", { timeOut: toast.duration });
+                    break;
+                case 2:
+                    toastr.error(txt, "Hata", { timeOut: toast.duration });
+                    break;
+                case 3:
+                    toastr.info(txt, "Bilgi", { timeOut: toast.duration });
+                    break;
+                case 4:
+                    toastr.warning(txt, "Uyarı", { timeOut: toast.duration });
+                    break;
+                default:
+            }
+        }
+    </script>
+
+    <script type="text/javascript">        
+        window.console.log = function () {
+            console.error('Burada yapmaya çalıştığınız işlemler kaydedilmektedir. Sınavınız iptal edilebilir.');
+            window.console.log = function () {
+                return false;
+            }
+        }
+
+        $(document).ready(function () {
+            $(document).keydown(function (event) {
+                if (event.keyCode == 123) {
+                    return false;
+                } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                    return false;
+                }
+            });
+        });        
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./E_Ticaret_finalfiles/js(1)"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-29424182-21');
+    </script>
+
+
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></div><svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body></html>
