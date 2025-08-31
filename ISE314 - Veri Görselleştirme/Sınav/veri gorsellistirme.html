@@ -1,0 +1,2808 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review -->
+<html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="">--><base href=".">
+    
+        <title>SABİS | Sakarya Üniversitesi Bilgi Sistemi</title>
+
+    <meta name="description" content="Çevrimiçi Sınav Sistemi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--begin::Fonts -->
+    <link rel="stylesheet" href="./veri gorsellistirme_files/css">
+
+    <!--end::Fonts -->
+    <!--begin::Page Vendors Styles(used by this page) -->
+    
+
+    <style type="text/css">
+        .cevap {
+            vertical-align: top;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 10px;
+        }
+
+        .cevap-yazi {
+            padding: 2px;
+        }
+
+        .radio.radio-success > input:checked ~ span:after {
+            background-color: #1BC5BD !important;
+            border-color: #1BC5BD !important;
+        }
+
+        .radio span {
+            flex-shrink: 0;
+        }
+
+
+        .question-number {
+            border: solid 2px;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .radio-disabled {
+            opacity: 1 !important;
+        }
+
+        .answer-text {
+            white-space: pre-wrap;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .empty-question {
+            border: solid 1px #f64e60 !important;
+        }
+
+        .jdflkgjlk {
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+    </style>
+
+    <link href="./veri gorsellistirme_files/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
+
+    <!--end::Page Vendors Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="./veri gorsellistirme_files/plugins.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./veri gorsellistirme_files/prismjs.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./veri gorsellistirme_files/style.bundle.css" rel="stylesheet" type="text/css">
+
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="./veri gorsellistirme_files/dark.css" rel="stylesheet" type="text/css">
+    <link href="./veri gorsellistirme_files/light.css" rel="stylesheet" type="text/css">
+    <link href="./veri gorsellistirme_files/dark(1).css" rel="stylesheet" type="text/css">
+    <link href="./veri gorsellistirme_files/light(1).css" rel="stylesheet" type="text/css">
+
+    <!--end::Layout Skins -->
+        <link rel="shortcut icon" href="https://cdn0.sabis.sakarya.edu.tr/saulogo/favicon.ico">
+
+    <style type="text/css">
+        #img-preview {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            min-height: 100vh;
+            width: 100%;
+            z-index: 1999;
+            background: #0000006b;
+            padding: 100px 10% 0 10%;
+            text-align: center;
+            display: none;
+            bottom: 0;
+        }
+
+        #img-preview-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 32px;
+            color: white;
+            background-color: transparent;
+        }
+
+        #img-preview-info {
+            position: absolute;
+            bottom: 30px;
+            color: #ffffff6e;
+            left: 45%;
+        }
+
+        .toast-error {
+            background-color: #bd362f !important;
+        }
+    </style>
+
+<style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}
+
+
+/* scrollbar is not visible by default for legend, hence forcing the visibility */
+.apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+
+.apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.apexcharts-text tspan {
+  font-family: inherit;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark {
+  color: #fff;
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.apexcharts-tooltip * {
+  font-family: inherit;
+}
+
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #333;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active,
+.apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+
+.apexcharts-tooltip-series-group-hidden {
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  padding: 0 !important;
+}
+
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+
+.apexcharts-tooltip-candlestick>div {
+  margin: 4px 0;
+}
+
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-tooltip-rangebar {
+  padding: 5px 8px;
+}
+
+.apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777;
+}
+
+.apexcharts-tooltip-rangebar .series-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-xaxistooltip:after,
+.apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+.apexcharts-xaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-top:after,
+.apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top:after {
+  border-top-color: #ECEFF1
+}
+
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:after {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-yaxistooltip:after,
+.apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-yaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.apexcharts-yaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after,
+.apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+
+.apexcharts-yaxistooltip-right:after,
+.apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:after {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:after {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip.apexcharts-active {
+  opacity: 1;
+}
+
+.apexcharts-yaxistooltip-hidden {
+  display: none;
+}
+
+.apexcharts-xcrosshairs,
+.apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.apexcharts-active,
+.apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_boundingRect, .svg_select_points_rot {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.apexcharts-selection-rect + g .svg_select_boundingRect,
+.apexcharts-selection-rect + g .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.apexcharts-selection-rect + g .svg_select_points_l,
+.apexcharts-selection-rect + g .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg_select_points {
+  fill: #efefef;
+  stroke: #333;
+  rx: 2;
+}
+
+.apexcharts-canvas.apexcharts-zoomable .hovering-zoom {
+  cursor: crosshair
+}
+
+.apexcharts-canvas.apexcharts-zoomable .hovering-pan {
+  cursor: move
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon,
+.apexcharts-reset-icon,
+.apexcharts-pan-icon,
+.apexcharts-selection-icon,
+.apexcharts-menu-icon,
+.apexcharts-toolbar-custom-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6E8192;
+  text-align: center;
+}
+
+.apexcharts-zoom-icon svg,
+.apexcharts-zoomin-icon svg,
+.apexcharts-zoomout-icon svg,
+.apexcharts-reset-icon svg,
+.apexcharts-menu-icon svg {
+  fill: #6E8192;
+}
+
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.76)
+}
+
+.apexcharts-theme-dark .apexcharts-zoom-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomout-icon svg,
+.apexcharts-theme-dark .apexcharts-reset-icon svg,
+.apexcharts-theme-dark .apexcharts-pan-icon svg,
+.apexcharts-theme-dark .apexcharts-selection-icon svg,
+.apexcharts-theme-dark .apexcharts-menu-icon svg,
+.apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg {
+  fill: #f3f4f5;
+}
+
+.apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg {
+  fill: #008FFB;
+}
+
+.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+.apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon,
+.apexcharts-menu-icon {
+  position: relative;
+}
+
+.apexcharts-reset-icon {
+  margin-left: 5px;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-reset-icon,
+.apexcharts-menu-icon {
+  transform: scale(0.85);
+}
+
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon {
+  transform: scale(0.7)
+}
+
+.apexcharts-zoomout-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.62);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+
+.apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: #008FFB;
+}
+
+.apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: 0.15s ease all;
+  pointer-events: none;
+}
+
+.apexcharts-menu.apexcharts-menu-open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.apexcharts-theme-light .apexcharts-menu-item:hover {
+  background: #eee;
+}
+
+.apexcharts-theme-dark .apexcharts-menu {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  }
+}
+
+.apexcharts-datalabel.apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabels,
+.apexcharts-datalabel,
+.apexcharts-datalabel-label,
+.apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-canvas .apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-gridline,
+.apexcharts-annotation-rect,
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line,
+.apexcharts-zoom-rect,
+.apexcharts-toolbar svg,
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-radar-series path,
+.apexcharts-radar-series polygon {
+  pointer-events: none;
+}
+
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Resize generated styles */
+
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resize-triggers,
+.resize-triggers>div,
+.contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize-triggers>div {
+  background: #eee;
+  overflow: auto;
+}
+
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}</style><style>.windowPopup___hXPQC {
+  height: 56px;
+  width: 56px;
+  border-radius: 7px 0px 0px 7px;
+  overflow: hidden;
+  transition: height 0.5s, width 0.5s;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 1px, rgba(0, 0, 0, 0.25) 0px 1.5px 6px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  font-family: Helvetica, Arial, sans-serif;
+  border: 0;
+}
+.windowPopup___hXPQC.expanded___0nU-K {
+  width: 350px;
+  height: 250px;
+}
+.windowPopup___hXPQC.expanded___0nU-K .titleBar___rb1QT {
+  cursor: default;
+}
+.windowPopup___hXPQC .titleBar___rb1QT {
+  background-image: linear-gradient(45deg, #f4496f 0%, #ff4bcf 100%);
+  height: 56px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 8px 4px 8px 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.windowPopup___hXPQC .titleBar___rb1QT .shopifyIcon___9P37F {
+  height: 40px;
+  width: 40px;
+  -webkit-user-drag: none;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.windowPopup___hXPQC .titleBar___rb1QT .titleBarText___k69VM {
+  color: white;
+  font-size: 21px;
+  font-weight: lighter;
+  white-space: nowrap;
+  flex-grow: 1;
+  user-select: none;
+}
+.windowPopup___hXPQC .titleBar___rb1QT .closeButton___YHs1q {
+  color: white;
+}
+.windowPopup___hXPQC .titleBar___rb1QT .closeButton___YHs1q:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.windowPopup___hXPQC .popupContent___8Zm76 {
+  background-color: white;
+  flex-grow: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .shopInfo___PRZ3p {
+  flex-grow: 1;
+  font-size: 18px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .shopInfo___PRZ3p > * {
+  min-width: 326px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .shopInfo___PRZ3p .popupContentText___rSaSv {
+  margin-bottom: 12px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .shopInfo___PRZ3p .randomShopInfo___nHBKK {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .checkOutMore___QfkE4 {
+  min-width: 326px;
+  display: flex;
+  align-items: center;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .checkOutMore___QfkE4 .checkOutMoreImage___LqSw5 {
+  width: 150px;
+  margin-right: 8px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .checkOutMore___QfkE4 .checkOutMoreText___p-Mtf {
+  font-size: 14px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .blockOptions___Lxhtg {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .blockOptions___Lxhtg .optionsButton___vRN2w {
+  padding-top: 4px;
+  color: #b3b3b3;
+  text-decoration: underline;
+  cursor: pointer;
+  width: fit-content;
+}
+.windowPopupIframe___4Hb8g {
+  width: 0px;
+  height: 0px;
+  z-index: 2147483647 !important;
+  position: fixed !important;
+  top: 285px !important;
+  right: 0px !important;
+  border: 0 !important;
+}
+</style><script type="text/javascript" src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/popup.js" async=""></script><script type="text/javascript" src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/tat_popup.js" async=""></script><style>div[value="91691691"] { display: none; }</style></head>
+
+<body id="kt_body" class="header-fixed header-mobile-fixed vsc-initialized" data-scrolltop="on">
+    <!--begin::Main-->
+    <!--begin::Header Mobile-->
+    <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed ">
+
+        <!--begin::Logo-->
+        <a href="https://esinav.sabis.sakarya.edu.tr/">
+                <img alt="Logo" src="./veri gorsellistirme_files/logo-sabis-sau.png">
+        </a>
+
+        <!--end::Logo-->
+        <!--begin::Toolbar-->
+        <div class="d-flex align-items-center">
+
+            <!--begin::Aside Mobile Toggle-->
+            <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+                <span></span>
+            </button>
+
+            <!--end::Aside Mobile Toggle-->
+            <!--begin::Header Menu Mobile Toggle-->
+            <button class="btn p-0 burger-icon ml-4 d-none d-md-none d-lg-block" id="kt_header_mobile_toggle">
+                <span></span>
+            </button>
+
+            <!--end::Header Menu Mobile Toggle-->
+            <!--begin::Topbar Mobile Toggle-->
+            <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+                <span class="svg-icon svg-icon-xl">
+
+                    <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                            <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                            <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"></path>
+                        </g>
+                    </svg>
+
+                    <!--end::Svg Icon-->
+                </span>
+            </button>
+
+            <!--end::Topbar Mobile Toggle-->
+        </div>
+
+        <!--end::Toolbar-->
+    </div>
+
+    <!--end::Header Mobile-->
+    <div class="d-flex flex-column flex-root">
+
+        <!--begin::Page-->
+        <div class="d-flex flex-row flex-column-fluid page">
+
+            <!--[html-partial:include:{"file":"partials/_aside.html"}]/-->
+
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+
+                <!--[html-partial:include:{"file":"partials/_header.html"}]/-->
+                
+<!--begin::Header-->
+<div id="kt_header" class="header  header-fixed ">
+
+    <!--begin::Container-->
+    <div class=" container-fluid  d-flex align-items-stretch justify-content-between">
+
+        <!--begin::Header Menu Wrapper-->
+        <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+                <div class="header-logo">
+                    <a href="https://esinav.sabis.sakarya.edu.tr/">
+                            <img alt="Logo" src="./veri gorsellistirme_files/logo-sabis-sau.png">
+                    </a>
+                </div>
+
+            <!--begin::Header Menu-->
+            <div id="kt_header_menu" class="header-menu header-menu-mobile  header-menu-layout-default ">
+
+                <!--begin::Header Nav-->
+                <ul class="menu-nav ">
+                    <li class="menu-item  menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active" data-menu-toggle="click" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link menu-toggle"><span class="menu-text">Çevrimiçi Sınav Sistemi</span><i class="menu-arrow"></i></a>
+
+                    </li>
+
+                </ul>
+
+                <!--end::Header Nav-->
+            </div>
+
+            <!--end::Header Menu-->
+        </div>
+
+        <!--end::Header Menu Wrapper-->
+        <!--begin::Topbar-->
+        <div class="topbar">
+
+            <!--begin::Languages-->
+            <div class="dropdown" style="display:none;">
+
+                <!--begin::Toggle-->
+                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                    <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
+                        <img class="h-20px w-20px rounded-sm" src="./veri gorsellistirme_files/226-united-states.svg" alt="">
+                    </div>
+                </div>
+
+                <!--end::Toggle-->
+                <!--begin::Dropdown-->
+                <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
+
+                    <!--[html-partial:include:{"file":"partials/_extras/dropdown/languages.html"}]/-->
+                </div>
+
+                <!--end::Dropdown-->
+            </div>
+
+            <!--end::Languages-->
+            <!--begin::User-->
+            <div class="dropdown">
+
+                <!--begin::Toggle-->
+                
+
+                <!--end::Toggle-->
+                <!--begin::Dropdown-->
+                <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
+
+
+                    <!--begin::Header-->
+                    <!--end::Header-->
+                    <!--begin::Nav-->
+                    <div class="navi navi-spacer-x-0 pt-5">
+                        <!--begin::Footer-->
+                      
+
+                        <!--end::Footer-->
+                    </div>
+
+                    <!--end::Nav-->
+                </div>
+
+                <!--end::Dropdown-->
+            </div>
+
+            <!--end::User-->
+        </div>
+
+        <!--end::Topbar-->
+    </div>
+
+    <!--end::Container-->
+</div>
+
+<!--end::Header-->
+                <!--begin::Content-->
+                <div class="content  d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--[html-partial:include:{"file":"partials/_content.html"}]/-->
+                    <div class="d-flex flex-column-fluid">
+                        
+
+
+
+<div class="container-fluid" onselectstart="return false" onpaste="return false;" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false">
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="b351bbea-9b7f-40dc-a5ac-f4618def2c51">Soru 1</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Microsoft Power BI uygulamasında kullanılan “Funnel Chart” ile ilgili olarak aşağıda verilenler bilgilerden hangisi <u>yanlıştır</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b351bbea-9b7f-40dc-a5ac-f4618def2c51" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">“Group” ve “Values” alanlarına sahiptir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b351bbea-9b7f-40dc-a5ac-f4618def2c51" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Artış ve azalışlar hakkında bilgi verir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b351bbea-9b7f-40dc-a5ac-f4618def2c51" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Her bir yatay çubuk(ya da huni), toplamın bir yüzdesini temsil eder.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b351bbea-9b7f-40dc-a5ac-f4618def2c51" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Tipik kullanımda yukarıdan aşağıya yatay çubuk uzunluğu artar.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b351bbea-9b7f-40dc-a5ac-f4618def2c51" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Mutlak sayıları ve göreceli oranları gösterebilir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="a8c99e63-0feb-41a0-b43e-f94892059580">Soru 2</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Microsoft Power BI ile ilgili olarak aşağıda verilen bilgilerden hangisi <u>yanlıştır</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a8c99e63-0feb-41a0-b43e-f94892059580" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Model sayfası kullanılarak veri kaynakları arasında ilişki tanımlanabilir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a8c99e63-0feb-41a0-b43e-f94892059580" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Veri alanlarının tipleri üzerinde dönüşümler yapılabilir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a8c99e63-0feb-41a0-b43e-f94892059580" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Alan(Field) bazlı, sayfa(Page) ya da rapor(Report) bazlı filtreleme yapılabilir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a8c99e63-0feb-41a0-b43e-f94892059580" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Uygulama içerisinde veri kaynağı oluşturulabilir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a8c99e63-0feb-41a0-b43e-f94892059580" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hazırlanan görselleştirme raporu yalnızca çevrim dışı görüntülenebilir. </strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="a32ebe17-a183-40c7-b5af-249debba7bc4">Soru 3</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Grafiksel tasarımla ilgili olarak aşağıda verilen bilgilerin hangisi <u>yanlıştır</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a32ebe17-a183-40c7-b5af-249debba7bc4" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Karanlık bir ortamda sunulacak tasarımlarda, koyu arka plan üzerine açık renkler kullanımı uygundur.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a32ebe17-a183-40c7-b5af-249debba7bc4" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Grafiksel tasarımda doygunluk ve parlaklık değişiminden ayırt edilebilir farklı renkler elde etmek mümkündür.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a32ebe17-a183-40c7-b5af-249debba7bc4" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Grafiksel tasarımın etkili olması için birçok renk kullanmak gereklidir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a32ebe17-a183-40c7-b5af-249debba7bc4" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">İnsan görme sisteminden hareketle, hazır renk paletleri çoğunlukla beyaz arka plan üzerinde işlem yapmak üzere oluşturulur.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a32ebe17-a183-40c7-b5af-249debba7bc4" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Grafiksel tasarım desteği sunan birçok uygulama yazılımında hazır renk paletleri bulunur.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="7104fba1-5b61-485c-9a3b-2ba49ed05553">Soru 4</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./veri gorsellistirme_files/e8bfa28a-f23b-4d81-8bc3-d4754404acfc.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte&nbsp;<u>doğru&nbsp;</u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7104fba1-5b61-485c-9a3b-2ba49ed05553" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Histogram Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7104fba1-5b61-485c-9a3b-2ba49ed05553" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sankey Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7104fba1-5b61-485c-9a3b-2ba49ed05553" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bullet Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7104fba1-5b61-485c-9a3b-2ba49ed05553" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Chord Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7104fba1-5b61-485c-9a3b-2ba49ed05553" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sunburst Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="9c152380-b357-4e95-a649-f1fa98611b36">Soru 5</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi Büyük Veri (Big Data) ile ilgili olarak sıralanan özelliklerden birisi <u>değildir</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c152380-b357-4e95-a649-f1fa98611b36" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hız (Velocity)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c152380-b357-4e95-a649-f1fa98611b36" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Boyut (Volume)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c152380-b357-4e95-a649-f1fa98611b36" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Geçerlilik (Validity)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c152380-b357-4e95-a649-f1fa98611b36" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Değer (Value)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c152380-b357-4e95-a649-f1fa98611b36" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Çeşitlilik (Variety)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="4b43365e-e878-4666-9cae-6b9b1f2708e0">Soru 6</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıda verilen Microsoft Power BI veri kaynaklarından hangisi veritabanı (Database) kategorisinde <u>yer almaz</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4b43365e-e878-4666-9cae-6b9b1f2708e0" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Oracle</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4b43365e-e878-4666-9cae-6b9b1f2708e0" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Microsoft SQL Server</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4b43365e-e878-4666-9cae-6b9b1f2708e0" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Text/CSV</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4b43365e-e878-4666-9cae-6b9b1f2708e0" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">SAP HANA</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4b43365e-e878-4666-9cae-6b9b1f2708e0" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Teradata</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="04abf91f-2690-418c-bb31-4365c66a0931">Soru 7</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Zamanla değişen verilerin eğilimini ve önceden belirlenmiş bir hedefle ilişkisi incelemek üzere aşağıda verilen veri analizi uygulamalarından hangisi yapılır?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-04abf91f-2690-418c-bb31-4365c66a0931" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Ayrıştırma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-04abf91f-2690-418c-bb31-4365c66a0931" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Evrilme &amp; Sapma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-04abf91f-2690-418c-bb31-4365c66a0931" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Karakterizasyon</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-04abf91f-2690-418c-bb31-4365c66a0931" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sınıflandırma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-04abf91f-2690-418c-bb31-4365c66a0931" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Aykırılık Analizi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="3105cbee-a9c0-44bc-8de5-ef7003b7a518">Soru 8</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./veri gorsellistirme_files/4ec50fc3-d8d0-4cbb-a212-970884b5ada7.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Microsoft Power BI uygulamasında <strong>Home\Data</strong> sekmesinde bulunan <strong>Enter Data</strong> (seçili komut) komutunun işlevi aşağıdakilerden hangisinde <u>doğru </u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3105cbee-a9c0-44bc-8de5-ef7003b7a518" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Uygulamaya yeni boyut (dimension) eklemek</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3105cbee-a9c0-44bc-8de5-ef7003b7a518" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Uygulamayı sunucu üzerinde yayınlamak (publish)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3105cbee-a9c0-44bc-8de5-ef7003b7a518" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Var olan veri tablosuna yeni kayıt eklemek</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3105cbee-a9c0-44bc-8de5-ef7003b7a518" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Uygulama içerisinde veri  tablosu oluşturmak</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-3105cbee-a9c0-44bc-8de5-ef7003b7a518" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Uygulama içinde yeni ölçü (measure) oluşturmak</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="af5a0c88-1445-4bc8-9795-1362a5decb20">Soru 9</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Veri görselleştirme uygulamalarındaki harita(map) tabanlı görselleştirme grafikleri ilgili olarak aşağıda verilen değerlendirmelerden hangisi <u>yanlıştır</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-af5a0c88-1445-4bc8-9795-1362a5decb20" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Harita tabanlı görselleştirme grafikleri için hesaplama(measure) alanı olması gerek değildir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-af5a0c88-1445-4bc8-9795-1362a5decb20" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Harita ile ilişkilendirilecek veri alanlarına coğrafik rol atanması görselleştirmenin daha uygun ve doğru olmasını sağlar.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-af5a0c88-1445-4bc8-9795-1362a5decb20" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Mevcut görselleştirme uygulaması haricinde herhangi ek sağlayıcı bir servise ihtiyaç yoktur.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-af5a0c88-1445-4bc8-9795-1362a5decb20" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Görselleştirme ilgili harita üzerinde katmanlar oluşturulmak suretiyle elde edilir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-af5a0c88-1445-4bc8-9795-1362a5decb20" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Harita üzerinde koordinat ya da bölge görüntülenebilir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="e7f66382-f1d7-4239-b65a-ba3455460807">Soru 10</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>“Kurumsal ana bilgisayar sunucusunda veya bulutta tutulan yönetimin karar verme sürecini destekleyen konu odaklı, farklı kaynaklardan gelen ve zamanla değişim gösteren veri topluluğu” tanımı aşağıdakilerden hangisine aittir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-e7f66382-f1d7-4239-b65a-ba3455460807" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Veritabanı</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-e7f66382-f1d7-4239-b65a-ba3455460807" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Veri Madenciliği</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-e7f66382-f1d7-4239-b65a-ba3455460807" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Veri Ambarı</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-e7f66382-f1d7-4239-b65a-ba3455460807" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Veri Görselleştirme</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-e7f66382-f1d7-4239-b65a-ba3455460807" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Veri Bilimi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="9c7af9c3-2f80-470a-885a-d57577a22e36">Soru 11</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi renk modellerinden birisi <u>değildir</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c7af9c3-2f80-470a-885a-d57577a22e36" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">HSI</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c7af9c3-2f80-470a-885a-d57577a22e36" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">DPI</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c7af9c3-2f80-470a-885a-d57577a22e36" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">CMY</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c7af9c3-2f80-470a-885a-d57577a22e36" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Munsell</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9c7af9c3-2f80-470a-885a-d57577a22e36" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">YUV</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="562cf220-52fa-4791-8f92-406f10a5323a">Soru 12</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./veri gorsellistirme_files/5bd62dcb-68ce-4963-a9fa-7b93e8d42eed.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte <u>doğru </u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-562cf220-52fa-4791-8f92-406f10a5323a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">TreeMap Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-562cf220-52fa-4791-8f92-406f10a5323a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Pie Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-562cf220-52fa-4791-8f92-406f10a5323a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bubble Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-562cf220-52fa-4791-8f92-406f10a5323a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Scatter Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-562cf220-52fa-4791-8f92-406f10a5323a" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bullet Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="026eba40-66d0-48a4-bec4-8f0133ae0fc5">Soru 13</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdaki grafiklerden hangisi Microsoft Power BI uygulamasındaki Görselleştirmeler (Visualizations) kısmında varsayılan olarak <u>bulunmaz</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-026eba40-66d0-48a4-bec4-8f0133ae0fc5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Stacked Column Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-026eba40-66d0-48a4-bec4-8f0133ae0fc5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Multi-row Card</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-026eba40-66d0-48a4-bec4-8f0133ae0fc5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Gauge</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-026eba40-66d0-48a4-bec4-8f0133ae0fc5" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">R Script Visual</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-026eba40-66d0-48a4-bec4-8f0133ae0fc5" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Chord Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="59ea1c7d-08ff-4f8f-a5ce-134b3f5250ea">Soru 14</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi iyi bir veri görselleştirme uygulamasının özelliklerinden <u>değildir</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-59ea1c7d-08ff-4f8f-a5ce-134b3f5250ea" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Amaca Uygunluk (Congruity)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-59ea1c7d-08ff-4f8f-a5ce-134b3f5250ea" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Kararlılık (Stability)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-59ea1c7d-08ff-4f8f-a5ce-134b3f5250ea" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Kavrayış (Comprehension)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-59ea1c7d-08ff-4f8f-a5ce-134b3f5250ea" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Açıklayıcılık (Expressiveness)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-59ea1c7d-08ff-4f8f-a5ce-134b3f5250ea" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Etkililik (Effectiveness)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="365b29f0-ff09-406b-869c-482801bcd279">Soru 15</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./veri gorsellistirme_files/462c8f78-3d1b-43d1-b718-e0fabe1ea7f2.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte&nbsp;<u>doğru&nbsp;</u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-365b29f0-ff09-406b-869c-482801bcd279" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sankey Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-365b29f0-ff09-406b-869c-482801bcd279" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Chord Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-365b29f0-ff09-406b-869c-482801bcd279" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bar Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-365b29f0-ff09-406b-869c-482801bcd279" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Network Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-365b29f0-ff09-406b-869c-482801bcd279" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Word Cloud</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="edbeb1b8-232f-4a63-bee0-113c948c12f2">Soru 16</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./veri gorsellistirme_files/e0c85d08-8764-48cc-bd0f-6aae6e12686e.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte <u>doğru </u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-edbeb1b8-232f-4a63-bee0-113c948c12f2" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Scatter Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-edbeb1b8-232f-4a63-bee0-113c948c12f2" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Calendar Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-edbeb1b8-232f-4a63-bee0-113c948c12f2" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sunburst Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-edbeb1b8-232f-4a63-bee0-113c948c12f2" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Column Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-edbeb1b8-232f-4a63-bee0-113c948c12f2" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bullet Graph</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="2d356bed-77cc-4eb2-a456-98bf30fae607">Soru 17</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./veri gorsellistirme_files/4382dfa8-8832-4fe6-a3c5-f77491c90444.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Verilen görselleştirme grafiği ile ilgili olarak aşağıdaki değerlendirmelerden hangisi <u>yanlıştır</u>?</p><p>(M: Monday&nbsp;–&nbsp;Pazartesi, Jan: January&nbsp;–&nbsp;Ocak)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-2d356bed-77cc-4eb2-a456-98bf30fae607" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Görselleştirme grafiğinin adı Calendar Chart' dır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-2d356bed-77cc-4eb2-a456-98bf30fae607" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Salı günleri müşteriler  hiçbir varlık edinmemiştir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-2d356bed-77cc-4eb2-a456-98bf30fae607" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yılın son günü müşteriler hiçbir varlık edinmemiştir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-2d356bed-77cc-4eb2-a456-98bf30fae607" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Ocak 2006 içerisinde müşteriler hiçbir varlık edinmemiştir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-2d356bed-77cc-4eb2-a456-98bf30fae607" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Müşterilerin en çok varlık edindiği tarih Ekim ayı içerisindedir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="0136efa6-b02f-4b7c-bfbb-c1e837886414">Soru 18</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./veri gorsellistirme_files/65409584-0183-4d0c-8e5f-7d53f7ee5f2e.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Kovid-19 veri seti ile oluşturulan görselleştirme grafiği ile ilgili olarak aşağıdaki değerlendirmelerden hangisi&nbsp;<u>yanlıştır</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-0136efa6-b02f-4b7c-bfbb-c1e837886414" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Grafiğe göre en yoğun Kovid-19 ölümlerinin Kuzey Amerika kıtasında olduğu anlaşılmaktadır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-0136efa6-b02f-4b7c-bfbb-c1e837886414" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Grafikte üzerindeki çember renkleri ülkelerle ilişkilendirilmiştir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-0136efa6-b02f-4b7c-bfbb-c1e837886414" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Görselleştirme grafiğinin genel adı Map Chart' tır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-0136efa6-b02f-4b7c-bfbb-c1e837886414" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yaşanan Kovid-19 ölüm sayılarıyla çember büyüklükleri doğru orantılıdır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-0136efa6-b02f-4b7c-bfbb-c1e837886414" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Grafiğe göre Avrupa'da Orta Doğu bölgesine kıyasla daha fazla ölüm olduğu anlaşılmaktadır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="07a875eb-e414-410f-a438-9e3afbe49e6a">Soru 19</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Microsoft Power BI uygulaması içerisinde varsayılan olarak bulunmayan görselleştirme grafiklerini eklemek için aşağıdaki komutların hangisi kullanılmalıdır?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-07a875eb-e414-410f-a438-9e3afbe49e6a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Fields | Search</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-07a875eb-e414-410f-a438-9e3afbe49e6a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Filters | Search</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-07a875eb-e414-410f-a438-9e3afbe49e6a" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Visualizations | Get More Visuals</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-07a875eb-e414-410f-a438-9e3afbe49e6a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">File | Get Data</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-07a875eb-e414-410f-a438-9e3afbe49e6a" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Enter Data | Load</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="145b1d4c-ad47-4477-b216-bbc253b6ebf3">Soru 20</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./veri gorsellistirme_files/ac470eff-418f-423e-b7b4-c621e0ac71da.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte&nbsp;<u>doğru&nbsp;</u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom Mexocizs mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-145b1d4c-ad47-4477-b216-bbc253b6ebf3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sankey Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-145b1d4c-ad47-4477-b216-bbc253b6ebf3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Pie Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-145b1d4c-ad47-4477-b216-bbc253b6ebf3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Radar Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-145b1d4c-ad47-4477-b216-bbc253b6ebf3" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Chord Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-145b1d4c-ad47-4477-b216-bbc253b6ebf3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Donut Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+
+    <div class="card card-custom Mexocizs mb-2">
+        <div class="row">
+
+
+           
+
+        </div>
+    </div>
+
+</div>
+
+
+
+                    </div>
+                </div>
+
+                <!--end::Content-->
+                <!--[html-partial:include:{"file":"partials/_footer.html"}]/-->
+                
+<div class="footer bg-white py-4 d-flex flex-lg-column " id="kt_footer">
+
+    <!--begin::Container-->
+    <div class=" container-fluid  d-flex flex-column flex-md-row align-items-center justify-content-between">
+
+        <!--begin::Copyright-->
+        <div class="text-dark order-2 order-md-1">
+            <span class="text-muted font-weight-bold mr-2">2020©</span>
+                <a href="https://baum.sakarya.edu.tr/" target="_blank" class="text-dark-75 text-hover-primary">Bilgisayar Araştırma ve Uygulama Merkezi</a>
+
+        </div>
+
+        <!--end::Copyright-->
+        <!--begin::Nav-->
+        <div class="nav nav-dark">
+
+        </div>
+
+        <!--end::Nav-->
+    </div>
+
+    <!--end::Container-->
+</div>
+
+<!--end::Footer-->
+            </div>
+
+            <!--end::Wrapper-->
+        </div>
+
+        <!--end::Page-->
+    </div>
+
+    <div id="question_navigation_panel" class="offcanvas offcanvas-right p-10">
+        <!--begin::Header-->
+        <div class="offcanvas-header d-flex align-items-center justify-content-between pb-7">
+            <h4 class="font-weight-bold m-0">Soru Listesi</h4>
+            <a href="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="question_navigation_close">
+                <i class="ki ki-close icon-xs text-muted"></i>
+            </a>
+        </div>
+        <div class="offcanvas-content">
+            <div class="d-flex justify-content-between mb-5">
+                <a href="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review#" class="btn btn-primary btn-sm btn-upper btn-bold" data-toggle="modal" data-target="#modal-new-question"><i class="flaticon-plus"></i> Yeni Soru Ekle</a>
+            </div>
+            <!--begin::Wrapper-->
+            <div class="offcanvas-wrapper mb-5 scroll-pull">
+
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::Purchase-->
+            <div class="offcanvas-footer">
+            </div>
+            <!--end::Purchase-->
+        </div>
+        <!--end::Content-->
+    </div>
+
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+
+            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1"></rect>
+                    <path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </svg>
+
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+    <div id="img-preview">
+        <span id="img-preview-close"><i class="fa fa-times"></i></span>
+        <img src="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review">
+        <small id="img-preview-info">Kapatmak için görüntüye tıklayabilirsiniz</small>
+    </div>
+
+    <!--end::Scrolltop-->
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script>
+        var KTAppSettings = {
+            "breakpoints": {
+                "sm": 576,
+                "md": 768,
+                "lg": 992,
+                "xl": 1200,
+                "xxl": 1200
+            },
+            "colors": {
+                "theme": {
+                    "base": {
+                        "white": "#ffffff",
+                        "primary": "#6993FF",
+                        "secondary": "#E5EAEE",
+                        "success": "#1BC5BD",
+                        "info": "#8950FC",
+                        "warning": "#FFA800",
+                        "danger": "#F64E60",
+                        "light": "#F3F6F9",
+                        "dark": "#212121"
+                    },
+                    "light": {
+                        "white": "#ffffff",
+                        "primary": "#E1E9FF",
+                        "secondary": "#ECF0F3",
+                        "success": "#C9F7F5",
+                        "info": "#EEE5FF",
+                        "warning": "#FFF4DE",
+                        "danger": "#FFE2E5",
+                        "light": "#F3F6F9",
+                        "dark": "#D6D6E0"
+                    },
+                    "inverse": {
+                        "white": "#ffffff",
+                        "primary": "#ffffff",
+                        "secondary": "#212121",
+                        "success": "#ffffff",
+                        "info": "#ffffff",
+                        "warning": "#ffffff",
+                        "danger": "#ffffff",
+                        "light": "#464E5F",
+                        "dark": "#ffffff"
+                    }
+                },
+                "gray": {
+                    "gray-100": "#F3F6F9",
+                    "gray-200": "#ECF0F3",
+                    "gray-300": "#E5EAEE",
+                    "gray-400": "#D6D6E0",
+                    "gray-500": "#B5B5C3",
+                    "gray-600": "#80808F",
+                    "gray-700": "#464E5F",
+                    "gray-800": "#1B283F",
+                    "gray-900": "#212121"
+                }
+            },
+            "font-family": "Poppins"
+        };
+
+        function PageLoadingStart() {
+            KTApp.blockPage({ overlayColor: "#000000", type: "v2", state: "success", message: "Lütfen bekleyin..." });
+        }
+
+        function PageLoadingStop() {
+            KTApp.unblockPage();
+        }
+
+        function PreviewImage(target) {
+            $("#img-preview img").attr('src', $(target).children().first().attr('src'));
+            $("#img-preview").show();
+        }
+
+
+    </script>
+
+    <!-- end::Global Config -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="./veri gorsellistirme_files/plugins.bundle.js.تنزيل" type="text/javascript"></script>
+    <script src="./veri gorsellistirme_files/prismjs.bundle.js.تنزيل"></script>
+    <script src="./veri gorsellistirme_files/scripts.bundle.js.تنزيل" type="text/javascript"></script>
+
+    <!--end::Global Theme Bundle -->
+    <!--begin::Page Vendors(used by this page) -->
+    <script src="./veri gorsellistirme_files/fullcalendar.bundle.js.تنزيل" type="text/javascript"></script>
+
+    <!--end::Page Vendors -->
+    <!--begin::Page Scripts(used by this page) -->
+
+    <!--end::Page Scripts -->
+
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("body").on("contextmenu", function (e) {
+                return false;
+            });
+
+            $('body').bind('cut copy paste', function (e) {
+                e.preventDefault();
+            });
+
+            window.onbeforeprint = function () {
+                $('div').hide();
+            };
+
+            $('#form-end').on('submit', function () {
+                var $this = $(this);
+
+                Swal.fire({
+                    title: 'Dikkat',
+                    text: "Sınavı bitirmek üzeresiniz. Sınavı bitirdiğiniz takdirde süreniz olsa dahi tekrar bu sınava giriş yapamazsınız.",
+                    icon: 'error',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sınavı Bitir',
+                    cancelButtonText: 'İptal'
+                }).then((result) => {
+                    if (result.value) {
+                        $this.off('submit').submit();
+                    }
+
+                });
+
+                return false;
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#img-preview").click(function () {
+                $(this).hide();
+            });
+        });
+
+        $(document).ajaxError(function (e, x) {
+            toastr.error("Beklenmedik bir hata oluştu.<br/>İnternet bağlantınızın olduğundan emin olun.<br/>Sayfayı yenilemeyi deneyin veya daha sonra tekrar deneyin.", "Hata", { timeOut: 10000 });
+        });
+
+        $(document).ajaxSuccess(function (e, x) {
+            if (x.responseJSON !== undefined && x.responseJSON.autoHandle) {
+                handleToast(x.responseJSON);
+            }
+        });
+
+        function handleToast(toast) {
+            var txt = '';
+            if (toast.messageList != null) {
+                txt = toast.messageList.join('<br/>');
+            }
+
+            switch (toast.enumResultType) {
+                case 1:
+                    toastr.success(txt, "Başarılı", { timeOut: toast.duration });
+                    break;
+                case 2:
+                    toastr.error(txt, "Hata", { timeOut: toast.duration });
+                    break;
+                case 3:
+                    toastr.info(txt, "Bilgi", { timeOut: toast.duration });
+                    break;
+                case 4:
+                    toastr.warning(txt, "Uyarı", { timeOut: toast.duration });
+                    break;
+                default:
+            }
+        }
+    </script>
+
+    <script type="text/javascript">        
+        window.console.log = function () {
+            console.error('Burada yapmaya çalıştığınız işlemler kaydedilmektedir. Sınavınız iptal edilebilir.');
+            window.console.log = function () {
+                return false;
+            }
+        }
+
+        $(document).ready(function () {
+            $(document).keydown(function (event) {
+                if (event.keyCode == 123) {
+                    return false;
+                } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                    return false;
+                }
+            });
+        });        
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./veri gorsellistirme_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-29424182-21');
+    </script>
+
+
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body><template id="transover-popup-template"></template><template id="transover-tat-popup-template"></template></html>

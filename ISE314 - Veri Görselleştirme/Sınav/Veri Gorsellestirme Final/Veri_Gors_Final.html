@@ -1,0 +1,2856 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review -->
+<html lang="tr"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="">--><base href=".">
+    
+        <title>SABİS | Sakarya Üniversitesi Bilgi Sistemi</title>
+
+    <meta name="description" content="Çevrimiçi Sınav Sistemi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--begin::Fonts -->
+    <link rel="stylesheet" href="./Veri_Gors_Final_files/css">
+
+    <!--end::Fonts -->
+    <!--begin::Page Vendors Styles(used by this page) -->
+    
+
+    <style type="text/css">
+        .cevap {
+            vertical-align: top;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 10px;
+        }
+
+        .cevap-yazi {
+            padding: 2px;
+        }
+
+        .radio.radio-success > input:checked ~ span:after {
+            background-color: #1BC5BD !important;
+            border-color: #1BC5BD !important;
+        }
+
+        .radio span {
+            flex-shrink: 0;
+        }
+
+
+        .question-number {
+            border: solid 2px;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .radio-disabled {
+            opacity: 1 !important;
+        }
+
+        .answer-text {
+            white-space: pre-wrap;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .empty-question {
+            border: solid 1px #f64e60 !important;
+        }
+
+        .jdflkgjlk {
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+    </style>
+
+    <link href="./Veri_Gors_Final_files/fullcalendar.bundle.css" rel="stylesheet" type="text/css">
+
+    <!--end::Page Vendors Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="./Veri_Gors_Final_files/plugins.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./Veri_Gors_Final_files/prismjs.bundle.css" rel="stylesheet" type="text/css">
+    <link href="./Veri_Gors_Final_files/style.bundle.css" rel="stylesheet" type="text/css">
+
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="./Veri_Gors_Final_files/dark.css" rel="stylesheet" type="text/css">
+    <link href="./Veri_Gors_Final_files/light.css" rel="stylesheet" type="text/css">
+    <link href="./Veri_Gors_Final_files/dark(1).css" rel="stylesheet" type="text/css">
+    <link href="./Veri_Gors_Final_files/light(1).css" rel="stylesheet" type="text/css">
+
+    <!--end::Layout Skins -->
+        <link rel="shortcut icon" href="https://cdn0.sabis.sakarya.edu.tr/saulogo/favicon.ico">
+
+    <style type="text/css">
+        #img-preview {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            min-height: 100vh;
+            width: 100%;
+            z-index: 1999;
+            background: #0000006b;
+            padding: 100px 10% 0 10%;
+            text-align: center;
+            display: none;
+            bottom: 0;
+        }
+
+        #img-preview-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 32px;
+            color: white;
+            background-color: transparent;
+        }
+
+        #img-preview-info {
+            position: absolute;
+            bottom: 30px;
+            color: #ffffff6e;
+            left: 45%;
+        }
+
+        .toast-error {
+            background-color: #bd362f !important;
+        }
+    </style>
+
+<style type="text/css">.apexcharts-canvas {
+  position: relative;
+  user-select: none;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}
+
+
+/* scrollbar is not visible by default for legend, hence forcing the visibility */
+.apexcharts-canvas ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 6px;
+}
+
+.apexcharts-canvas ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+.apexcharts-inner {
+  position: relative;
+}
+
+.apexcharts-text tspan {
+  font-family: inherit;
+}
+
+.legend-mouseover-inactive {
+  transition: 0.15s ease all;
+  opacity: 0.20;
+}
+
+.apexcharts-series-collapsed {
+  opacity: 0;
+}
+
+.apexcharts-tooltip {
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px -4px #999;
+  cursor: default;
+  font-size: 14px;
+  left: 62px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 12;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  border: 1px solid #e3e3e3;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark {
+  color: #fff;
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.apexcharts-tooltip * {
+  font-family: inherit;
+}
+
+
+.apexcharts-tooltip-title {
+  padding: 6px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: #ECEFF1;
+  border-bottom: 1px solid #ddd;
+}
+
+.apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #333;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  display: inline-block;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.apexcharts-tooltip-text-z-label:empty,
+.apexcharts-tooltip-text-z-value:empty {
+  display: none;
+}
+
+.apexcharts-tooltip-text-value,
+.apexcharts-tooltip-text-z-value {
+  font-weight: 600;
+}
+
+.apexcharts-tooltip-marker {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.apexcharts-tooltip-series-group {
+  padding: 0 10px;
+  display: none;
+  text-align: left;
+  justify-content: left;
+  align-items: center;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  opacity: 1;
+}
+
+.apexcharts-tooltip-series-group.apexcharts-active,
+.apexcharts-tooltip-series-group:last-child {
+  padding-bottom: 4px;
+}
+
+.apexcharts-tooltip-series-group-hidden {
+  opacity: 0;
+  height: 0;
+  line-height: 0;
+  padding: 0 !important;
+}
+
+.apexcharts-tooltip-y-group {
+  padding: 6px 0 5px;
+}
+
+.apexcharts-tooltip-candlestick {
+  padding: 4px 8px;
+}
+
+.apexcharts-tooltip-candlestick>div {
+  margin: 4px 0;
+}
+
+.apexcharts-tooltip-candlestick span.value {
+  font-weight: bold;
+}
+
+.apexcharts-tooltip-rangebar {
+  padding: 5px 8px;
+}
+
+.apexcharts-tooltip-rangebar .category {
+  font-weight: 600;
+  color: #777;
+}
+
+.apexcharts-tooltip-rangebar .series-name {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.apexcharts-xaxistooltip {
+  opacity: 0;
+  padding: 9px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-xaxistooltip:after,
+.apexcharts-xaxistooltip:before {
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-xaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-left: -6px;
+}
+
+.apexcharts-xaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+.apexcharts-xaxistooltip-bottom:after,
+.apexcharts-xaxistooltip-bottom:before {
+  bottom: 100%;
+}
+
+.apexcharts-xaxistooltip-top:after,
+.apexcharts-xaxistooltip-top:before {
+  top: 100%;
+}
+
+.apexcharts-xaxistooltip-bottom:after {
+  border-bottom-color: #ECEFF1;
+}
+
+.apexcharts-xaxistooltip-bottom:before {
+  border-bottom-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:after {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-bottom.apexcharts-theme-dark:before {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top:after {
+  border-top-color: #ECEFF1
+}
+
+.apexcharts-xaxistooltip-top:before {
+  border-top-color: #90A4AE;
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:after {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip-top.apexcharts-theme-dark:before {
+  border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-xaxistooltip.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-yaxistooltip {
+  opacity: 0;
+  padding: 4px 10px;
+  pointer-events: none;
+  color: #373d3f;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  background: #ECEFF1;
+  border: 1px solid #90A4AE;
+}
+
+.apexcharts-yaxistooltip.apexcharts-theme-dark {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.apexcharts-yaxistooltip:after,
+.apexcharts-yaxistooltip:before {
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.apexcharts-yaxistooltip:after {
+  border-color: rgba(236, 239, 241, 0);
+  border-width: 6px;
+  margin-top: -6px;
+}
+
+.apexcharts-yaxistooltip:before {
+  border-color: rgba(144, 164, 174, 0);
+  border-width: 7px;
+  margin-top: -7px;
+}
+
+.apexcharts-yaxistooltip-left:after,
+.apexcharts-yaxistooltip-left:before {
+  left: 100%;
+}
+
+.apexcharts-yaxistooltip-right:after,
+.apexcharts-yaxistooltip-right:before {
+  right: 100%;
+}
+
+.apexcharts-yaxistooltip-left:after {
+  border-left-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-left:before {
+  border-left-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:after {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-left.apexcharts-theme-dark:before {
+  border-left-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right:after {
+  border-right-color: #ECEFF1;
+}
+
+.apexcharts-yaxistooltip-right:before {
+  border-right-color: #90A4AE;
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:after {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip-right.apexcharts-theme-dark:before {
+  border-right-color: rgba(0, 0, 0, 0.5);
+}
+
+.apexcharts-yaxistooltip.apexcharts-active {
+  opacity: 1;
+}
+
+.apexcharts-yaxistooltip-hidden {
+  display: none;
+}
+
+.apexcharts-xcrosshairs,
+.apexcharts-ycrosshairs {
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-xcrosshairs.apexcharts-active,
+.apexcharts-ycrosshairs.apexcharts-active {
+  opacity: 1;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-ycrosshairs-hidden {
+  opacity: 0;
+}
+
+.apexcharts-selection-rect {
+  cursor: move;
+}
+
+.svg_select_boundingRect, .svg_select_points_rot {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.apexcharts-selection-rect + g .svg_select_boundingRect,
+.apexcharts-selection-rect + g .svg_select_points_rot {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.apexcharts-selection-rect + g .svg_select_points_l,
+.apexcharts-selection-rect + g .svg_select_points_r {
+  cursor: ew-resize;
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg_select_points {
+  fill: #efefef;
+  stroke: #333;
+  rx: 2;
+}
+
+.apexcharts-canvas.apexcharts-zoomable .hovering-zoom {
+  cursor: crosshair
+}
+
+.apexcharts-canvas.apexcharts-zoomable .hovering-pan {
+  cursor: move
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon,
+.apexcharts-reset-icon,
+.apexcharts-pan-icon,
+.apexcharts-selection-icon,
+.apexcharts-menu-icon,
+.apexcharts-toolbar-custom-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  color: #6E8192;
+  text-align: center;
+}
+
+.apexcharts-zoom-icon svg,
+.apexcharts-zoomin-icon svg,
+.apexcharts-zoomout-icon svg,
+.apexcharts-reset-icon svg,
+.apexcharts-menu-icon svg {
+  fill: #6E8192;
+}
+
+.apexcharts-selection-icon svg {
+  fill: #444;
+  transform: scale(0.76)
+}
+
+.apexcharts-theme-dark .apexcharts-zoom-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomin-icon svg,
+.apexcharts-theme-dark .apexcharts-zoomout-icon svg,
+.apexcharts-theme-dark .apexcharts-reset-icon svg,
+.apexcharts-theme-dark .apexcharts-pan-icon svg,
+.apexcharts-theme-dark .apexcharts-selection-icon svg,
+.apexcharts-theme-dark .apexcharts-menu-icon svg,
+.apexcharts-theme-dark .apexcharts-toolbar-custom-icon svg {
+  fill: #f3f4f5;
+}
+
+.apexcharts-canvas .apexcharts-zoom-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-selection-icon.apexcharts-selected svg,
+.apexcharts-canvas .apexcharts-reset-zoom-icon.apexcharts-selected svg {
+  fill: #008FFB;
+}
+
+.apexcharts-theme-light .apexcharts-selection-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoom-icon:not(.apexcharts-selected):hover svg,
+.apexcharts-theme-light .apexcharts-zoomin-icon:hover svg,
+.apexcharts-theme-light .apexcharts-zoomout-icon:hover svg,
+.apexcharts-theme-light .apexcharts-reset-icon:hover svg,
+.apexcharts-theme-light .apexcharts-menu-icon:hover svg {
+  fill: #333;
+}
+
+.apexcharts-selection-icon,
+.apexcharts-menu-icon {
+  position: relative;
+}
+
+.apexcharts-reset-icon {
+  margin-left: 5px;
+}
+
+.apexcharts-zoom-icon,
+.apexcharts-reset-icon,
+.apexcharts-menu-icon {
+  transform: scale(0.85);
+}
+
+.apexcharts-zoomin-icon,
+.apexcharts-zoomout-icon {
+  transform: scale(0.7)
+}
+
+.apexcharts-zoomout-icon {
+  margin-right: 3px;
+}
+
+.apexcharts-pan-icon {
+  transform: scale(0.62);
+  position: relative;
+  left: 1px;
+  top: 0px;
+}
+
+.apexcharts-pan-icon svg {
+  fill: #fff;
+  stroke: #6E8192;
+  stroke-width: 2;
+}
+
+.apexcharts-pan-icon.apexcharts-selected svg {
+  stroke: #008FFB;
+}
+
+.apexcharts-pan-icon:not(.apexcharts-selected):hover svg {
+  stroke: #333;
+}
+
+.apexcharts-toolbar {
+  position: absolute;
+  z-index: 11;
+  max-width: 176px;
+  text-align: right;
+  border-radius: 3px;
+  padding: 0px 6px 2px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apexcharts-menu {
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px;
+  right: 10px;
+  opacity: 0;
+  min-width: 110px;
+  transition: 0.15s ease all;
+  pointer-events: none;
+}
+
+.apexcharts-menu.apexcharts-menu-open {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.15s ease all;
+}
+
+.apexcharts-menu-item {
+  padding: 6px 7px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.apexcharts-theme-light .apexcharts-menu-item:hover {
+  background: #eee;
+}
+
+.apexcharts-theme-dark .apexcharts-menu {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .apexcharts-canvas:hover .apexcharts-toolbar {
+    opacity: 1;
+  }
+}
+
+.apexcharts-datalabel.apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-pie-label,
+.apexcharts-datalabels,
+.apexcharts-datalabel,
+.apexcharts-datalabel-label,
+.apexcharts-datalabel-value {
+  cursor: default;
+  pointer-events: none;
+}
+
+.apexcharts-pie-label-delay {
+  opacity: 0;
+  animation-name: opaque;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.apexcharts-canvas .apexcharts-element-hidden {
+  opacity: 0;
+}
+
+.apexcharts-hide .apexcharts-series-points {
+  opacity: 0;
+}
+
+.apexcharts-gridline,
+.apexcharts-annotation-rect,
+.apexcharts-tooltip .apexcharts-marker,
+.apexcharts-area-series .apexcharts-area,
+.apexcharts-line,
+.apexcharts-zoom-rect,
+.apexcharts-toolbar svg,
+.apexcharts-area-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-line-series .apexcharts-series-markers .apexcharts-marker.no-pointer-events,
+.apexcharts-radar-series path,
+.apexcharts-radar-series polygon {
+  pointer-events: none;
+}
+
+
+/* markers */
+
+.apexcharts-marker {
+  transition: 0.15s ease all;
+}
+
+@keyframes opaque {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Resize generated styles */
+
+@keyframes resizeanim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.resize-triggers {
+  animation: 1ms resizeanim;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resize-triggers,
+.resize-triggers>div,
+.contract-trigger:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.resize-triggers>div {
+  background: #eee;
+  overflow: auto;
+}
+
+.contract-trigger:before {
+  width: 200%;
+  height: 200%;
+}</style><style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.super_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.super_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.super_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.super_copy_btns_btn:hover{opacity:.8}.super_copy_btns_btn:active{opacity:1}</style><style>.windowPopup___hXPQC {
+  height: 56px;
+  width: 56px;
+  border-radius: 7px 0px 0px 7px;
+  overflow: hidden;
+  transition: height 0.5s, width 0.5s;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 1px, rgba(0, 0, 0, 0.25) 0px 1.5px 6px, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  font-family: Helvetica, Arial, sans-serif;
+  border: 0;
+}
+.windowPopup___hXPQC.expanded___0nU-K {
+  width: 350px;
+  height: 250px;
+}
+.windowPopup___hXPQC.expanded___0nU-K .titleBar___rb1QT {
+  cursor: default;
+}
+.windowPopup___hXPQC .titleBar___rb1QT {
+  background-image: linear-gradient(45deg, #f4496f 0%, #ff4bcf 100%);
+  height: 56px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 8px 4px 8px 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.windowPopup___hXPQC .titleBar___rb1QT .shopifyIcon___9P37F {
+  height: 40px;
+  width: 40px;
+  -webkit-user-drag: none;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.windowPopup___hXPQC .titleBar___rb1QT .titleBarText___k69VM {
+  color: white;
+  font-size: 21px;
+  font-weight: lighter;
+  white-space: nowrap;
+  flex-grow: 1;
+  user-select: none;
+}
+.windowPopup___hXPQC .titleBar___rb1QT .closeButton___YHs1q {
+  color: white;
+}
+.windowPopup___hXPQC .titleBar___rb1QT .closeButton___YHs1q:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.windowPopup___hXPQC .popupContent___8Zm76 {
+  background-color: white;
+  flex-grow: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .shopInfo___PRZ3p {
+  flex-grow: 1;
+  font-size: 18px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .shopInfo___PRZ3p > * {
+  min-width: 326px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .shopInfo___PRZ3p .popupContentText___rSaSv {
+  margin-bottom: 12px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .shopInfo___PRZ3p .randomShopInfo___nHBKK {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .checkOutMore___QfkE4 {
+  min-width: 326px;
+  display: flex;
+  align-items: center;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .checkOutMore___QfkE4 .checkOutMoreImage___LqSw5 {
+  width: 150px;
+  margin-right: 8px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .checkOutMore___QfkE4 .checkOutMoreText___p-Mtf {
+  font-size: 14px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .blockOptions___Lxhtg {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.windowPopup___hXPQC .popupContent___8Zm76 .blockOptions___Lxhtg .optionsButton___vRN2w {
+  padding-top: 4px;
+  color: #b3b3b3;
+  text-decoration: underline;
+  cursor: pointer;
+  width: fit-content;
+}
+.windowPopupIframe___4Hb8g {
+  width: 0px;
+  height: 0px;
+  z-index: 2147483647 !important;
+  position: fixed !important;
+  top: 285px !important;
+  right: 0px !important;
+  border: 0 !important;
+}
+</style><script type="text/javascript" src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/popup.js" async=""></script><script type="text/javascript" src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/tat_popup.js" async=""></script><style>div[value="91691691"] { display: none; }</style></head>
+
+<body id="kt_body" class="header-fixed header-mobile-fixed page-loading vsc-initialized" data-scrolltop="on">
+    <!--begin::Main-->
+    <!--begin::Header Mobile-->
+    <div id="kt_header_mobile" class="header-mobile align-items-center  header-mobile-fixed ">
+
+        <!--begin::Logo-->
+        <a href="https://esinav.sabis.sakarya.edu.tr/">
+                <img alt="Logo" src="./Veri_Gors_Final_files/logo-sabis-sau.png">
+        </a>
+
+        <!--end::Logo-->
+        <!--begin::Toolbar-->
+        <div class="d-flex align-items-center">
+
+            <!--begin::Aside Mobile Toggle-->
+            <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+                <span></span>
+            </button>
+
+            <!--end::Aside Mobile Toggle-->
+            <!--begin::Header Menu Mobile Toggle-->
+            <button class="btn p-0 burger-icon ml-4 d-none d-md-none d-lg-block" id="kt_header_mobile_toggle">
+                <span></span>
+            </button>
+
+            <!--end::Header Menu Mobile Toggle-->
+            <!--begin::Topbar Mobile Toggle-->
+            <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+                <span class="svg-icon svg-icon-xl">
+
+                    <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                            <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                            <path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero"></path>
+                        </g>
+                    </svg>
+
+                    <!--end::Svg Icon-->
+                </span>
+            </button>
+
+            <!--end::Topbar Mobile Toggle-->
+        </div>
+
+        <!--end::Toolbar-->
+    </div>
+
+    <!--end::Header Mobile-->
+    <div class="d-flex flex-column flex-root">
+
+        <!--begin::Page-->
+        <div class="d-flex flex-row flex-column-fluid page">
+
+            <!--[html-partial:include:{"file":"partials/_aside.html"}]/-->
+
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+
+                <!--[html-partial:include:{"file":"partials/_header.html"}]/-->
+                
+<!--begin::Header-->
+<div id="kt_header" class="header  header-fixed ">
+
+    <!--begin::Container-->
+    <div class=" container-fluid  d-flex align-items-stretch justify-content-between">
+
+        <!--begin::Header Menu Wrapper-->
+        <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+                <div class="header-logo">
+                    <a href="https://esinav.sabis.sakarya.edu.tr/">
+                            <img alt="Logo" src="./Veri_Gors_Final_files/logo-sabis-sau.png">
+                    </a>
+                </div>
+
+            <!--begin::Header Menu-->
+            <div id="kt_header_menu" class="header-menu header-menu-mobile  header-menu-layout-default ">
+
+                <!--begin::Header Nav-->
+                <ul class="menu-nav ">
+                    <li class="menu-item  menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active" data-menu-toggle="click" aria-haspopup="true">
+                        <a href="javascript:;" class="menu-link menu-toggle"><span class="menu-text">Çevrimiçi Sınav Sistemi</span><i class="menu-arrow"></i></a>
+
+                    </li>
+
+                </ul>
+
+                <!--end::Header Nav-->
+            </div>
+
+            <!--end::Header Menu-->
+        </div>
+
+        <!--end::Header Menu Wrapper-->
+        <!--begin::Topbar-->
+        <div class="topbar">
+
+            <!--begin::Languages-->
+            <div class="dropdown" style="display:none;">
+
+                <!--begin::Toggle-->
+                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                    <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
+                        <img class="h-20px w-20px rounded-sm" src="./Veri_Gors_Final_files/226-united-states.svg" alt="">
+                    </div>
+                </div>
+
+                <!--end::Toggle-->
+                <!--begin::Dropdown-->
+                <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
+
+                    <!--[html-partial:include:{"file":"partials/_extras/dropdown/languages.html"}]/-->
+                </div>
+
+                <!--end::Dropdown-->
+            </div>
+
+            <!--end::Languages-->
+            <!--begin::User-->
+            <div class="dropdown">
+
+                <!--begin::Toggle-->
+
+
+                <!--end::Toggle-->
+                <!--begin::Dropdown-->
+                <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg p-0">
+
+
+                    <!--begin::Header-->
+                    <!--end::Header-->
+                    <!--begin::Nav-->
+                    <div class="navi navi-spacer-x-0 pt-5">
+                        <!--begin::Footer-->
+
+
+                        <!--end::Footer-->
+                    </div>
+
+                    <!--end::Nav-->
+                </div>
+
+                <!--end::Dropdown-->
+            </div>
+
+            <!--end::User-->
+        </div>
+
+        <!--end::Topbar-->
+    </div>
+
+    <!--end::Container-->
+</div>
+
+<!--end::Header-->
+                <!--begin::Content-->
+                <div class="content  d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--[html-partial:include:{"file":"partials/_content.html"}]/-->
+                    <div class="d-flex flex-column-fluid">
+                        
+
+
+
+<div class="container-fluid" onselectstart="return false" onpaste="return false;" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false">
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="4ed58b5e-0dda-451a-9a8d-251d31b57666">Soru 1</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi veri görselleştirme uygulamalarında kullanılan özetleme (aggregate) fonksiyonlarından birisi <u>değildir</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4ed58b5e-0dda-451a-9a8d-251d31b57666" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Median</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4ed58b5e-0dda-451a-9a8d-251d31b57666" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sum</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4ed58b5e-0dda-451a-9a8d-251d31b57666" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Average</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4ed58b5e-0dda-451a-9a8d-251d31b57666" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Union</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4ed58b5e-0dda-451a-9a8d-251d31b57666" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Count</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="100ebdff-7834-446e-a648-c1f5feb511ea">Soru 2</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Tableau uygulamasında kullanılabilir aşağıda verilen görselleştirme grafiklerinden hangisi bir (1) tarih boyutu gerektirir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-100ebdff-7834-446e-a648-c1f5feb511ea" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bubble Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-100ebdff-7834-446e-a648-c1f5feb511ea" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Treemap</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-100ebdff-7834-446e-a648-c1f5feb511ea" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Heat Map</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-100ebdff-7834-446e-a648-c1f5feb511ea" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Gantt Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-100ebdff-7834-446e-a648-c1f5feb511ea" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Histogram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="64830617-5f10-4e57-93e2-8bf1a8a29589">Soru 3</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Tableau uygulamasında "Path" görsel değişkenine hangi kısımdan ulaşılır?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-64830617-5f10-4e57-93e2-8bf1a8a29589" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Marks | Pie</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-64830617-5f10-4e57-93e2-8bf1a8a29589" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Marks | Polygon</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-64830617-5f10-4e57-93e2-8bf1a8a29589" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Analysis | View Data</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-64830617-5f10-4e57-93e2-8bf1a8a29589" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Analytics | Model</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-64830617-5f10-4e57-93e2-8bf1a8a29589" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Show Me</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="c0023410-4c6d-4d73-a871-3043a392e40f">Soru 4</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./Veri_Gors_Final_files/5e9a4c22-af65-451e-be94-644866fae52c.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte <u>doğru </u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c0023410-4c6d-4d73-a871-3043a392e40f" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Stream Graph</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c0023410-4c6d-4d73-a871-3043a392e40f" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sunburst Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c0023410-4c6d-4d73-a871-3043a392e40f" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bullet Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c0023410-4c6d-4d73-a871-3043a392e40f" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Histogram Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c0023410-4c6d-4d73-a871-3043a392e40f" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Map Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="065a6d2f-1907-4d9e-8cdf-3d000a5a5c6b">Soru 5</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Zamanla değişen verilerin eğilimini ve önceden belirlenmiş bir hedefle ilişkisi incelemek üzere aşağıda verilen veri analizi uygulamalarından hangisi yapılır?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-065a6d2f-1907-4d9e-8cdf-3d000a5a5c6b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Ayrıştırma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-065a6d2f-1907-4d9e-8cdf-3d000a5a5c6b" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Evrilme &amp; Sapma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-065a6d2f-1907-4d9e-8cdf-3d000a5a5c6b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Aykırılık Analizi</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-065a6d2f-1907-4d9e-8cdf-3d000a5a5c6b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Karakterizasyon</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-065a6d2f-1907-4d9e-8cdf-3d000a5a5c6b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sınıflandırma</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="4bfd1372-efef-492e-bba4-cd0a2af5ca0e">Soru 6</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Tableau uygulamasında saat aralığı oluşturmak için aşağıdakilerden hangisi kullanılır?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4bfd1372-efef-492e-bba4-cd0a2af5ca0e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Alias</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4bfd1372-efef-492e-bba4-cd0a2af5ca0e" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bin</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4bfd1372-efef-492e-bba4-cd0a2af5ca0e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Calendar</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4bfd1372-efef-492e-bba4-cd0a2af5ca0e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Geographic Role</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-4bfd1372-efef-492e-bba4-cd0a2af5ca0e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Format</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="b61a8b27-c8fc-485a-9f97-4a2c60d6fc7e">Soru 7</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Tableau uygulamasında, seçili bir boyut üzerinden aşağıdakilerden hangisini doğrudan oluşturmak için bir kısayol <u>bulunmaz</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b61a8b27-c8fc-485a-9f97-4a2c60d6fc7e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Group (Grup)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b61a8b27-c8fc-485a-9f97-4a2c60d6fc7e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bin (Aralık)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b61a8b27-c8fc-485a-9f97-4a2c60d6fc7e" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Parameter (Parametre)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b61a8b27-c8fc-485a-9f97-4a2c60d6fc7e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Set (Küme)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-b61a8b27-c8fc-485a-9f97-4a2c60d6fc7e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Calculated Field (Hesaplanmış Alan)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="89cf70f2-0cd5-476c-850b-3d1264e1f0b7">Soru 8</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi kurumsal veri görselleştirme uygulamalarının varsayılan işlevleri arasında yer alan, OLAP küpleri üzerindeki temel işlemlerden birisi <u>değildir</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-89cf70f2-0cd5-476c-850b-3d1264e1f0b7" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Detaylandırma (Drill Down)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-89cf70f2-0cd5-476c-850b-3d1264e1f0b7" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Özetleme (Roll Up | Aggregation)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-89cf70f2-0cd5-476c-850b-3d1264e1f0b7" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Alt Küp Oluşturma (Slice &amp; Dice)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-89cf70f2-0cd5-476c-850b-3d1264e1f0b7" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Görselleştirme (Visualization)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-89cf70f2-0cd5-476c-850b-3d1264e1f0b7" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Çevirme (Pivot)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="7a71c442-9504-4337-9026-046bc19f7e3e">Soru 9</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdaki grafiklerden hangisi Microsoft Power BI uygulamasındaki Görselleştirmeler (Visualizations) kısmında varsayılan olarak <u>bulunmaz</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7a71c442-9504-4337-9026-046bc19f7e3e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">R Script Visual</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7a71c442-9504-4337-9026-046bc19f7e3e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Multi-row Card</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7a71c442-9504-4337-9026-046bc19f7e3e" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Chord Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7a71c442-9504-4337-9026-046bc19f7e3e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Gauge</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7a71c442-9504-4337-9026-046bc19f7e3e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Stacked Column Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="eab56e47-0fa1-4e11-b077-5006c66710c3">Soru 10</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Tableau uygulamasındaki proje hiyerarşisi (yukarıdan aşağıya) aşağıdaki seçeneklerden hangisinde <u>doğru </u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-eab56e47-0fa1-4e11-b077-5006c66710c3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Dashboard – Story – WorkSheet</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-eab56e47-0fa1-4e11-b077-5006c66710c3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Story – Dashboard – WorkSheet</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-eab56e47-0fa1-4e11-b077-5006c66710c3" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">WorkSheet – Dashboard – Story</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-eab56e47-0fa1-4e11-b077-5006c66710c3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">WorkSheet – Story – Dashboard</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-eab56e47-0fa1-4e11-b077-5006c66710c3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Story – WorkSheet – Dashboard</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="23de9479-9ea9-4cf9-9212-f19a9e4cdd7e">Soru 11</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./Veri_Gors_Final_files/4382dfa8-8832-4fe6-a3c5-f77491c90444.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Verilen görselleştirme grafiği ile ilgili olarak aşağıdaki değerlendirmelerden hangisi <u>yanlıştır</u>?</p><p>(M: Monday&nbsp;–&nbsp;Pazartesi, Jan: January&nbsp;–&nbsp;Ocak)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-23de9479-9ea9-4cf9-9212-f19a9e4cdd7e" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Yılın son günü müşteriler hiçbir varlık edinmemiştir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-23de9479-9ea9-4cf9-9212-f19a9e4cdd7e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Salı günleri müşteriler  hiçbir varlık edinmemiştir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-23de9479-9ea9-4cf9-9212-f19a9e4cdd7e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Görselleştirme grafiğinin adı Calendar Chart' dır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-23de9479-9ea9-4cf9-9212-f19a9e4cdd7e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Ocak 2006 içerisinde müşteriler hiçbir varlık edinmemiştir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-23de9479-9ea9-4cf9-9212-f19a9e4cdd7e" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Müşterilerin en çok varlık edindiği tarih Ekim ayı içerisindedir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="c85681f5-ac71-487d-96a7-b9749fab35b0">Soru 12</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./Veri_Gors_Final_files/7ad6eebd-de73-48e0-baec-ce194188db0c.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte <u>doğru </u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c85681f5-ac71-487d-96a7-b9749fab35b0" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Chord Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c85681f5-ac71-487d-96a7-b9749fab35b0" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Scatter Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c85681f5-ac71-487d-96a7-b9749fab35b0" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Network Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c85681f5-ac71-487d-96a7-b9749fab35b0" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sankey Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-c85681f5-ac71-487d-96a7-b9749fab35b0" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Line Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="a7b507ee-35e2-4ed6-b88d-970244c3dd0b">Soru 13</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./Veri_Gors_Final_files/e0c85d08-8764-48cc-bd0f-6aae6e12686e.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte <u>doğru </u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a7b507ee-35e2-4ed6-b88d-970244c3dd0b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Calendar Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a7b507ee-35e2-4ed6-b88d-970244c3dd0b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sunburst Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a7b507ee-35e2-4ed6-b88d-970244c3dd0b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Scatter Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a7b507ee-35e2-4ed6-b88d-970244c3dd0b" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bullet Graph</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-a7b507ee-35e2-4ed6-b88d-970244c3dd0b" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Column Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="9cc7b6c9-2907-4006-bca9-5641d45291e3">Soru 14</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./Veri_Gors_Final_files/e8bfa28a-f23b-4d81-8bc3-d4754404acfc.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Yukarıdaki görselleştirme grafiğinin adı hangi seçenekte&nbsp;<u>doğru&nbsp;</u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9cc7b6c9-2907-4006-bca9-5641d45291e3" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sankey Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9cc7b6c9-2907-4006-bca9-5641d45291e3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Sunburst Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9cc7b6c9-2907-4006-bca9-5641d45291e3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Histogram Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9cc7b6c9-2907-4006-bca9-5641d45291e3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bullet Chart</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-9cc7b6c9-2907-4006-bca9-5641d45291e3" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Chord Diagram</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="5bb61da7-b666-42ad-9025-1ba6afdfc4d4">Soru 15</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdaki seçeneklerden hangisinde Tableau uygulamasında <strong>sayı </strong>veri tipleri için kullanılan simge <u>doğru </u>olarak verilmiştir?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-5bb61da7-b666-42ad-9025-1ba6afdfc4d4" disabled="disabled">
+                                        <span></span>
+                                                    <img src="./Veri_Gors_Final_files/6cba6e42-1469-40df-a071-ebe5ae1d2a30.png" alt="resim" class="preview-question-image" style="margin-left: 10px;">
+                                        <strong class="answer-text jdflkgjlk"></strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-5bb61da7-b666-42ad-9025-1ba6afdfc4d4" disabled="disabled">
+                                        <span></span>
+                                                    <img src="./Veri_Gors_Final_files/a8c05ecc-5270-4864-bf61-83c01641a7ee.png" alt="resim" class="preview-question-image" style="margin-left: 10px;">
+                                        <strong class="answer-text jdflkgjlk"></strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-5bb61da7-b666-42ad-9025-1ba6afdfc4d4" disabled="disabled">
+                                        <span></span>
+                                                    <img src="./Veri_Gors_Final_files/2701973f-c36d-4a04-9ea9-20abe4cc0b39.png" alt="resim" class="preview-question-image" style="margin-left: 10px;">
+                                        <strong class="answer-text jdflkgjlk"></strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-5bb61da7-b666-42ad-9025-1ba6afdfc4d4" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                                    <img src="./Veri_Gors_Final_files/2759d862-5e0f-442b-a82b-cc0493d39dc8.png" alt="resim" class="preview-question-image" style="margin-left: 10px;">
+                                        <strong class="answer-text jdflkgjlk"></strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-5bb61da7-b666-42ad-9025-1ba6afdfc4d4" disabled="disabled">
+                                        <span></span>
+                                                    <img src="./Veri_Gors_Final_files/c5be7272-953e-4c7c-b2ec-b7424542f817.png" alt="resim" class="preview-question-image" style="margin-left: 10px;">
+                                        <strong class="answer-text jdflkgjlk"></strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="37b417a7-44bc-4c11-b64f-3326bf5e2364">Soru 16</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./Veri_Gors_Final_files/b6c9f4d9-421d-4f09-9d75-b3c048b7c7ca.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Verilen görselleştirme grafiği ile ilgili olarak aşağıdaki değerlendirmelerden hangisi <u>yanlıştır</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-37b417a7-44bc-4c11-b64f-3326bf5e2364" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Gofret – ₺ 1' den yüksek ortalama satış fiyatı</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-37b417a7-44bc-4c11-b64f-3326bf5e2364" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Cips ve Kek – En düşük ortalama maliyet</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-37b417a7-44bc-4c11-b64f-3326bf5e2364" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Çikolata – En yüksek ortalama maliyet ve satış fiyatı </strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-37b417a7-44bc-4c11-b64f-3326bf5e2364" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Bisküvi – En yüksek ortalama maliyet ve kâr</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-37b417a7-44bc-4c11-b64f-3326bf5e2364" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Kek – En düşük ortalama kâr</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="f8750e22-5dfe-48b6-a967-18b220ba0952">Soru 17</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Aşağıdakilerden hangisi Büyük Veri (Big Data) ile ilgili olarak sıralanan özelliklerden birisi <u>değildir</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-f8750e22-5dfe-48b6-a967-18b220ba0952" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Değer (Value)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-f8750e22-5dfe-48b6-a967-18b220ba0952" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Geçerlilik (Validity)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-f8750e22-5dfe-48b6-a967-18b220ba0952" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Çeşitlilik (Variety)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-f8750e22-5dfe-48b6-a967-18b220ba0952" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Boyut (Volume)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-f8750e22-5dfe-48b6-a967-18b220ba0952" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Hız (Velocity)</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="cee1235d-5abf-4f56-9464-944a607aea0f">Soru 18</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                                <div>
+                                    <img src="./Veri_Gors_Final_files/971edd57-252d-41e8-9160-20f27e16af37.png" alt="resim" class="preview-question-image mw-100">
+                                </div>
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Müşterilerin Bölge, Şehir ve İlçelerdeki şubelerde bulunan hesaplarıyla ilgili olarak Microsoft Power BI uygulaması ile bir görselleştirme yapılmak istenmektedir. Bu amaçla uygulama içine dahil edilen tablolardan(diyagrama bakınız) HESAP tablosu üzerinde oluşturulan, aşağıdaki kod satırı ile hangi işlem gerçekleştirilmektedir?</p><ul><li> t = HESAP[Meblag]*RELATED(DOVIZ_TUR[Kur])</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cee1235d-5abf-4f56-9464-944a607aea0f" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">HESAP tablosundaki Meblag değeri DOVIZ_TUR tablosuna aktarılmaktadır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cee1235d-5abf-4f56-9464-944a607aea0f" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">DOVIZ_TUR tablosundan Kur değeri alınarak t değişkenine aktarılmaktadır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cee1235d-5abf-4f56-9464-944a607aea0f" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">HESAP tablosu ile DOVIZ_TUR tablosu birleştirilmektedir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cee1235d-5abf-4f56-9464-944a607aea0f" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">t adlı yeni bir tablo oluşturulmaktadır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-cee1235d-5abf-4f56-9464-944a607aea0f" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">t adlı yeni bir sütun oluşturulmaktadır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="abbe42ed-7ec7-41b7-a983-f2e18b1dae18">Soru 19</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Microsoft Power BI uygulamasında, Dashboard üzerindeki görselleştirme grafikleri arasındaki etkileşimleri düzenlemek için aşağıdaki komutlardan hangisi kullanılmalıdır?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-abbe42ed-7ec7-41b7-a983-f2e18b1dae18" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Modeling | Manage Roles</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-abbe42ed-7ec7-41b7-a983-f2e18b1dae18" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Home | Transform Data</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-abbe42ed-7ec7-41b7-a983-f2e18b1dae18" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Format | Edit Interactions</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-abbe42ed-7ec7-41b7-a983-f2e18b1dae18" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Optimize | Pause Visuals</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-abbe42ed-7ec7-41b7-a983-f2e18b1dae18" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">View | Sync Slicers</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-2 ">
+            <div class="card-body d-flex align-items-center flex-wrap">
+                <div class="col-sm-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="font-weight-bolder question-observer question-number" data-q="7c3ad9c5-92e4-44b9-9c43-20bdd9705937">Soru 20</h3>
+                        <span class="grade label label-inline label-info label-xl">Puan: 5,00</span>
+                    </div>
+
+                    <div class="text-dark-50 font-size-lg mt-2 jdflkgjlk">
+                        <p>Tableau uygulaması ile ilgili aşağıda verilenlerden hangisi <u>yanlıştır</u>?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-custom aZOOTrbe mb-15 ">
+            <div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+
+                    <table class="table table-borderless table-hover">
+                            <tbody><tr>
+                                <td class="cevap">A</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7c3ad9c5-92e4-44b9-9c43-20bdd9705937" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Veri alanlarını harita grafiği ile ilişkilendirmek için coğrafik rol ataması yapılmalıdır.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">B</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7c3ad9c5-92e4-44b9-9c43-20bdd9705937" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Tableau uygulaması .PDF dosyalarından veri almayı destekler.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">C</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7c3ad9c5-92e4-44b9-9c43-20bdd9705937" disabled="disabled" checked="&#39;checked&#39;">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Tableau uygulamasının varsayılan dosya uzantısı .JSON şeklindedir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">D</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7c3ad9c5-92e4-44b9-9c43-20bdd9705937" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Tableau uygulaması kullanıcı seçimlerine uygun olarak grafik görselleştirmesini otomatik oluşturur.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cevap">E</td>
+                                <td class="cevap-yazi">
+                                    <label class="radio radio-success  radio-disabled w-100  align-items-start">
+                                        <input type="radio" name="radio-7c3ad9c5-92e4-44b9-9c43-20bdd9705937" disabled="disabled">
+                                        <span></span>
+                                        <strong class="answer-text jdflkgjlk">Tableau uygulamasında karşılıklı olarak Boyut (Dimension) - Ölçü (Measure) dönüşümü yapılabilir.</strong>
+                                    </label>
+                                </td>
+                            </tr>
+                    </tbody></table>
+            </div>
+        </div>
+
+    <div class="card card-custom aZOOTrbe mb-2">
+        <div class="row">
+
+
+            <div class="col-lg-6">
+                <form method="post" action="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Start">
+                    
+                    <input type="hidden" name="s" value="a18e986b-917f-4cac-9669-81a7acf19eb1">
+                    <div class="card-body d-flex align-items-center justify-content-center flex-wrap p-3">
+                        <button type="submit" class="btn btn-success" fdprocessedid="m0cwn9">Sınava Geri Dön</button>
+                    </div>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CIHPZ39wvFHt0i8CIRtO5X9_V5kDaSm9ow_T7Vu3yXUvpNaQKgkBL2vAbYhDP67B2gjiuLG0dHn2OC6yZAFNUO9Kqv0UYf0rMuHppPZsam1Ql2sq_vJklPj05oxlmtt6DL3_8D2dvFuoTYprv3xj7kb1BMNm3XLvkExuvIeHeBj4n03NFVVUQ4-3oPIZ414RA"></form>
+            </div>
+            <div class="col-lg-6">
+                <form method="post" id="form-end" action="https://esinav.sabis.sakarya.edu.tr/Session/Exam/End">
+                    
+                    <input type="hidden" name="s" value="a18e986b-917f-4cac-9669-81a7acf19eb1">
+                    <div class="card-body d-flex align-items-center justify-content-center flex-wrap flex-column p-3">
+                        <button type="submit" class="btn btn-danger" fdprocessedid="y50p34">Sınavı Bitir</button>
+                    </div>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CIHPZ39wvFHt0i8CIRtO5X9_V5kDaSm9ow_T7Vu3yXUvpNaQKgkBL2vAbYhDP67B2gjiuLG0dHn2OC6yZAFNUO9Kqv0UYf0rMuHppPZsam1Ql2sq_vJklPj05oxlmtt6DL3_8D2dvFuoTYprv3xj7kb1BMNm3XLvkExuvIeHeBj4n03NFVVUQ4-3oPIZ414RA"></form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+                    </div>
+                </div>
+
+                <!--end::Content-->
+                <!--[html-partial:include:{"file":"partials/_footer.html"}]/-->
+                
+<div class="footer bg-white py-4 d-flex flex-lg-column " id="kt_footer">
+
+    <!--begin::Container-->
+    <div class=" container-fluid  d-flex flex-column flex-md-row align-items-center justify-content-between">
+
+        <!--begin::Copyright-->
+        <div class="text-dark order-2 order-md-1">
+            <span class="text-muted font-weight-bold mr-2">2020©</span>
+                <a href="https://baum.sakarya.edu.tr/" target="_blank" class="text-dark-75 text-hover-primary">Bilgisayar Araştırma ve Uygulama Merkezi</a>
+
+        </div>
+
+        <!--end::Copyright-->
+        <!--begin::Nav-->
+        <div class="nav nav-dark">
+
+        </div>
+
+        <!--end::Nav-->
+    </div>
+
+    <!--end::Container-->
+</div>
+
+<!--end::Footer-->
+            </div>
+
+            <!--end::Wrapper-->
+        </div>
+
+        <!--end::Page-->
+    </div>
+
+    <div id="question_navigation_panel" class="offcanvas offcanvas-right p-10">
+        <!--begin::Header-->
+        <div class="offcanvas-header d-flex align-items-center justify-content-between pb-7">
+            <h4 class="font-weight-bold m-0">Soru Listesi</h4>
+            <a href="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="question_navigation_close">
+                <i class="ki ki-close icon-xs text-muted"></i>
+            </a>
+        </div>
+        <div class="offcanvas-content">
+            <div class="d-flex justify-content-between mb-5">
+                <a href="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review#" class="btn btn-primary btn-sm btn-upper btn-bold" data-toggle="modal" data-target="#modal-new-question"><i class="flaticon-plus"></i> Yeni Soru Ekle</a>
+            </div>
+            <!--begin::Wrapper-->
+            <div class="offcanvas-wrapper mb-5 scroll-pull">
+
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::Purchase-->
+            <div class="offcanvas-footer">
+            </div>
+            <!--end::Purchase-->
+        </div>
+        <!--end::Content-->
+    </div>
+
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+
+            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1"></rect>
+                    <path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </svg>
+
+            <!--end::Svg Icon-->
+        </span>
+    </div>
+    <div id="img-preview">
+        <span id="img-preview-close"><i class="fa fa-times"></i></span>
+        <img src="https://esinav.sabis.sakarya.edu.tr/Session/Exam/Review">
+        <small id="img-preview-info">Kapatmak için görüntüye tıklayabilirsiniz</small>
+    </div>
+
+    <!--end::Scrolltop-->
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script>
+        var KTAppSettings = {
+            "breakpoints": {
+                "sm": 576,
+                "md": 768,
+                "lg": 992,
+                "xl": 1200,
+                "xxl": 1200
+            },
+            "colors": {
+                "theme": {
+                    "base": {
+                        "white": "#ffffff",
+                        "primary": "#6993FF",
+                        "secondary": "#E5EAEE",
+                        "success": "#1BC5BD",
+                        "info": "#8950FC",
+                        "warning": "#FFA800",
+                        "danger": "#F64E60",
+                        "light": "#F3F6F9",
+                        "dark": "#212121"
+                    },
+                    "light": {
+                        "white": "#ffffff",
+                        "primary": "#E1E9FF",
+                        "secondary": "#ECF0F3",
+                        "success": "#C9F7F5",
+                        "info": "#EEE5FF",
+                        "warning": "#FFF4DE",
+                        "danger": "#FFE2E5",
+                        "light": "#F3F6F9",
+                        "dark": "#D6D6E0"
+                    },
+                    "inverse": {
+                        "white": "#ffffff",
+                        "primary": "#ffffff",
+                        "secondary": "#212121",
+                        "success": "#ffffff",
+                        "info": "#ffffff",
+                        "warning": "#ffffff",
+                        "danger": "#ffffff",
+                        "light": "#464E5F",
+                        "dark": "#ffffff"
+                    }
+                },
+                "gray": {
+                    "gray-100": "#F3F6F9",
+                    "gray-200": "#ECF0F3",
+                    "gray-300": "#E5EAEE",
+                    "gray-400": "#D6D6E0",
+                    "gray-500": "#B5B5C3",
+                    "gray-600": "#80808F",
+                    "gray-700": "#464E5F",
+                    "gray-800": "#1B283F",
+                    "gray-900": "#212121"
+                }
+            },
+            "font-family": "Poppins"
+        };
+
+        function PageLoadingStart() {
+            KTApp.blockPage({ overlayColor: "#000000", type: "v2", state: "success", message: "Lütfen bekleyin..." });
+        }
+
+        function PageLoadingStop() {
+            KTApp.unblockPage();
+        }
+
+        function PreviewImage(target) {
+            $("#img-preview img").attr('src', $(target).children().first().attr('src'));
+            $("#img-preview").show();
+        }
+
+
+    </script>
+
+    <!-- end::Global Config -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="./Veri_Gors_Final_files/plugins.bundle.js.تنزيل" type="text/javascript"></script>
+    <script src="./Veri_Gors_Final_files/prismjs.bundle.js.تنزيل"></script>
+    <script src="./Veri_Gors_Final_files/scripts.bundle.js.تنزيل" type="text/javascript"></script>
+
+    <!--end::Global Theme Bundle -->
+    <!--begin::Page Vendors(used by this page) -->
+    <script src="./Veri_Gors_Final_files/fullcalendar.bundle.js.تنزيل" type="text/javascript"></script>
+
+    <!--end::Page Vendors -->
+    <!--begin::Page Scripts(used by this page) -->
+
+    <!--end::Page Scripts -->
+
+
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("body").on("contextmenu", function (e) {
+                return false;
+            });
+
+            $('body').bind('cut copy paste', function (e) {
+                e.preventDefault();
+            });
+
+            window.onbeforeprint = function () {
+                $('div').hide();
+            };
+
+            $('#form-end').on('submit', function () {
+                var $this = $(this);
+
+                Swal.fire({
+                    title: 'Dikkat',
+                    text: "Sınavı bitirmek üzeresiniz. Sınavı bitirdiğiniz takdirde süreniz olsa dahi tekrar bu sınava giriş yapamazsınız.",
+                    icon: 'error',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sınavı Bitir',
+                    cancelButtonText: 'İptal'
+                }).then((result) => {
+                    if (result.value) {
+                        $this.off('submit').submit();
+                    }
+
+                });
+
+                return false;
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#img-preview").click(function () {
+                $(this).hide();
+            });
+        });
+
+        $(document).ajaxError(function (e, x) {
+            toastr.error("Beklenmedik bir hata oluştu.<br/>İnternet bağlantınızın olduğundan emin olun.<br/>Sayfayı yenilemeyi deneyin veya daha sonra tekrar deneyin.", "Hata", { timeOut: 10000 });
+        });
+
+        $(document).ajaxSuccess(function (e, x) {
+            if (x.responseJSON !== undefined && x.responseJSON.autoHandle) {
+                handleToast(x.responseJSON);
+            }
+        });
+
+        function handleToast(toast) {
+            var txt = '';
+            if (toast.messageList != null) {
+                txt = toast.messageList.join('<br/>');
+            }
+
+            switch (toast.enumResultType) {
+                case 1:
+                    toastr.success(txt, "Başarılı", { timeOut: toast.duration });
+                    break;
+                case 2:
+                    toastr.error(txt, "Hata", { timeOut: toast.duration });
+                    break;
+                case 3:
+                    toastr.info(txt, "Bilgi", { timeOut: toast.duration });
+                    break;
+                case 4:
+                    toastr.warning(txt, "Uyarı", { timeOut: toast.duration });
+                    break;
+                default:
+            }
+        }
+    </script>
+
+    <script type="text/javascript">        
+        window.console.log = function () {
+            console.error('Burada yapmaya çalıştığınız işlemler kaydedilmektedir. Sınavınız iptal edilebilir.');
+            window.console.log = function () {
+                return false;
+            }
+        }
+
+        $(document).ready(function () {
+            $(document).keydown(function (event) {
+                if (event.keyCode == 123) {
+                    return false;
+                } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                    return false;
+                }
+            });
+        });        
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="./Veri_Gors_Final_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-29424182-21');
+    </script>
+
+
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg></body><template id="transover-popup-template"></template><template id="transover-tat-popup-template"></template></html>
